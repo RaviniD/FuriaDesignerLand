@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+    --color-red-primary: #ED1C24;
+    --color-red-secundary: #EF3D4A;
+    --color-black-primary: #0C0C0C;
+    --color-gray-primary: #585858;
+    --color-white-primary: #FDFDFD;
+
+    --color-red-primary-to-red-secundary-vertical-gradient: linear-gradient(
+        180deg,
+        var(--color-red-primary) 0%,
+        var(--color-red-secundary) 100%
+    );
+
+    --color-red-primary-to-red-secundary-horizontal-gradient: linear-gradient(
+        90deg,
+        var(--color-red-primary) 0%,
+        var(--color-red-secundary) 100%
+    );
+
+}
