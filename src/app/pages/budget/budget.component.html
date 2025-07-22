@@ -1,0 +1,158 @@
+<div
+class="container mx-auto w-[70%] mt-[4rem] px-4 py-12 flex flex-col md:flex-row items-center"
+>
+
+<div class=" mb-10 md:mb-0 md:pr-8">
+  <div class="flex mb-6">
+    <h1 class="text-7xl">FÚRIA DESIGNER</h1>
+    <h1 class="text-7xl text-red-primary ml-4 transition-opacity duration-300">
+      ORÇAMENTO</h1>
+  </div>
+
+  <h2 class="text-lg text-black-primary font-semibold">
+    Faça o seu orçamento conosco! É no precinho.</h2>
+  </div>
+</div>
+
+<form 
+  action="https://formsubmit.co/vini.dos.s.p@gmail.com" 
+  method="POST"
+  class="max-w-2/5 mx-auto p-6 bg-black-primary rounded-lg shadow-md space-y-4"
+>
+<h2 class="flex justify-center text-center text-white text-3xl font-bold mt-1 mb-10 px-12">
+  PREENCHA PARA SOLICITAR O NOSSO SERVIÇO E JÁ TE ATENDEMOS!</h2>
+  <!-- Campo Nome Completo -->
+   <div class=" grid grid-cols-2 gap-x-8 gap-y-4">
+  <div class="space-y-1">
+    <label for="name" class="block text-sm font-medium  text-white-primary hover:underline">Nome Completo<span class="text-red-secundary ml-1">*</span></label>
+    <input 
+      type="text" 
+      name="name" 
+      id="name" 
+      required
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    >
+  </div>
+
+  <!-- Campo E-mail -->
+  <div class="space-y-1">
+    <label for="email" class="block text-sm font-medium  text-white-primary hover:underline">E-mail<span class="text-red-secundary ml-1">*</span></label>
+    <input 
+      type="email" 
+      name="email" 
+      id="email" 
+      required
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300 invalid:text-red-700"
+    >
+  </div>
+
+  <!-- Campo Telefone -->
+  <div class="space-y-1">
+    <label for="telefone" class="block text-sm font-medium  text-white-primary hover:underline">Telefone<span class="text-red-secundary ml-1">*</span></label>
+    <input 
+      type="tel" 
+      name="telefone" 
+      id="telefone" 
+      required
+      pattern="\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}"
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    >
+    <p class="text-xs text-gray-primary">Formato: (99) 99999-9999 ou 99 9999-9999</p>
+  </div>
+
+  <!-- Campo Cargo -->
+  <div class="space-y-1">
+    <label for="cargo" class="block text-sm font-medium  text-white-primary hover:underline">Cargo<span class="text-red-secundary ml-1">*</span></label>
+    <input 
+      type="text" 
+      name="cargo" 
+      id="cargo" 
+      required
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    >
+  </div>
+
+  <!-- Campo Link da Empresa -->
+  <div class="space-y-1">
+    <label for="linkEmpresa" class="block text-sm font-medium  text-white-primary hover:underline">Link da Empresa<span class="text-red-secundary ml-1">*</span></label>
+    <input 
+      type="url" 
+      name="linkEmpresa" 
+      id="linkEmpresa" 
+      required
+      placeholder="https://"
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    >
+  </div>
+
+  <!-- Campo Tipo de Serviço -->
+  <div class="space-y-1">
+    <label for="service" class="block text-sm font-medium  text-white-primary hover:underline">Tipo de Serviço<span class="text-red-secundary ml-1">*</span></label>
+    <select 
+      name="service" 
+      id="service" 
+      required
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    >
+      <option value="" disabled selected class="text-black-primary">Selecione um Serviço</option>
+      <option value="Arte Finalizacao" class="font-semibold text-black-primary ">Arte-Finalização</option>
+      <option value="Animacao de Banners" class="font-semibold text-black-primary">Animação de Banners</option>
+      <option value="Adaptacao e Desdobramento" class="font-semibold text-black-primary">Adaptação e Desdobramento</option>
+      <option value="Social Video" class="font-semibold text-black-primary">Social Vídeo</option>
+      <option value="Outro" class="text-black-primary">Outro...</option>
+    </select>
+  </div>
+</div>
+  <!-- Campo Descrição do Serviço -->
+  <div class="space-y-1">
+    <label for="desc" class="block text-sm font-medium  text-white-primary hover:underline">Descrição do Serviço</label>
+    <textarea  
+      type="text" 
+      name="desc" 
+      id="desc"
+      rows="2"
+      class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"
+    ></textarea>
+  </div>
+
+  <!-- Checkbox de Aceite -->
+  <div class="flex items-start">
+    <div class="flex items-center h-5">
+      <input 
+        type="checkbox" 
+        name="AceitaPolítica" 
+        id="AceitPolitica"
+        required
+        class="h-4 w-4"
+      >
+    </div>
+    <div class="ml-3 text-sm">
+      <label for="AceitPolitica" class="font-medium text-gray-primary">
+        Aceito a política de privacidade <span class="text-gray-400">*</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Campos hidden do FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://furiadesigner.com.br">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="Novo Contato - Formulário Site">
+
+  <!-- Botão de Envio -->
+   <div class="flex justify-center align-middle items-center">
+  <orce-button 
+    type="submit" 
+  >
+    SOLICITE ORÇAMENTO
+  </orce-button>
+</div>
+</form>
+
+<h2 class="flex justify-center text-black-primary text-6xl font-bold my-14">
+  ENTRE NESSA GALERIA
+</h2>
+
+<app-card-port-list > </app-card-port-list>
+<div class="w-full my-14"></div>
+<app-footer></app-footer>

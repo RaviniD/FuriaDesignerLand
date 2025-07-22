@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/roboto');
+@import url('https://fonts.cdnfonts.com/css/larsseit-font-family');
 
 @theme {
     --color-red-primary: #ED1C24;
     --color-red-secundary: #EF3D4A;
+    --color-red-secundary-opc: rgba(239, 61, 74, 0.50);
     --color-black-primary: #0C0C0C;
     --color-gray-primary: #585858;
     --color-white-primary: #FDFDFD;
@@ -19,4 +22,25 @@
         var(--color-red-secundary) 100%
     );
 
+    --shadow-cardbefore: 0px -2px 30px rgba(0, 0, 0, 0.70);
+    --shadow-cardafter: 0px 2px 30px rgba(0, 0, 0, 0.70);  
+
+    --inset-shadow-carouselleft: inset 30px -10px 30px rgba(0, 0, 0, 1); 
+    --inset-shadow-carouselright: inset -30px -10px 30px rgba(0, 0, 0, 1); 
+}
+
+a, button, h2, h3 {
+    font-family: 'Larsseit', sans-serif;
+}
+
+h1 {
+    font-family: 'Larsseit Extrabold', sans-serif;
+}
+
+p, span {
+    font-family: 'Roboto Black', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }

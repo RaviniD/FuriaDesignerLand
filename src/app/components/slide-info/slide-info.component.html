@@ -1,0 +1,40 @@
+<div class="max-w-5xl min-w-full mx-auto">
+    <!-- Tabs Navigation -->
+    <div class="flex mb-6 gap-6 justify-center">
+      @for (slide of slides(); track slide.id; let i = $index) {
+        <button
+          (click)="currentIndex.set(i)"
+          class=" w-[20%] px-6 py-3 text-xl font-bold focus:outline-none transition-colors cursor-pointer"
+          [class]="currentIndex() === i 
+            ? 'border-b-6 border-red-primary text-red-primary transition-all duration-500 hover:inset-shadow-c' 
+            : 'border-b-6 border-white-primary text-white-primary hover:opacity-80 transition-all hover:transition-all duration-500'">
+          {{ slide.tabTitle }}
+        </button>
+      }
+    </div>
+
+    <!-- Slide Content -->
+    <div class="flex flex-col md:flex-row gap-32 p-6 transition-opacity duration-300 justify-items-center justify-between mx-[15%]">
+      <!-- Text Content -->
+      <div class="md:w-2/4 space-y-4">
+        <h2 class="text-3xl font-bold text-white-primary">{{ currentSlide.title }}</h2>
+        <p class="text-white-primary">{{ currentSlide.description }}</p>
+        <div class="flex items-center align-middle">
+        <ul class="list-disc pl-5 space-y-2 text-red-secundary">
+          @for (item of currentSlide.items; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+        <img src="imgs/fireslide.svg" alt="fire" class="w-10 ml-8">
+      </div>
+      </div>
+      
+      <!-- Image -->
+      <div class="md:w-2/4 ">
+        <img 
+          [src]="currentSlide.image" 
+          [alt]="currentSlide.title"
+          class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+    </div>
+  </div>
