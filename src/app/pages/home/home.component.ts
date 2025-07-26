@@ -9,17 +9,17 @@ import { FooterComponent } from "../../components/footer/footer.component";
 // import { TextChangerComponent } from "../../components/text-changer/text-changer.component";
 
 @Component({
-  selector: "app-home",
-  imports: [
-    OrceButtonComponent,
-    CardPopListComponent,
-    LogoCarouselComponent,
-    SlideInfoComponent,
-    CardPortListComponent,
-    CardFeedbackListComponent,
-    FooterComponent,
-  ],
-  templateUrl: "./home.component.html",
-  styleUrl: "./home.component.css",
+	selector: "app-home",
+	imports: [
+		OrceButtonComponent,
+		CardPopListComponent,
+		LogoCarouselComponent,
+		SlideInfoComponent,
+		CardPortListComponent,
+		CardFeedbackListComponent,
+		FooterComponent,
+	],
+	templateUrl: "./home.component.html",
+	styleUrl: "./home.component.css",
 })
 export class HomeComponent {}

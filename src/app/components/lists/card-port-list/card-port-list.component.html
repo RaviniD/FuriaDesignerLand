@@ -1,18 +1,16 @@
 <div class="relative w-[100%] overflow-hidden">
-  <div class="flex animate-infinite-scroll items-center gap-2">
-    @for (card of cardsPort(); track card.id) {
-      <app-card-port
-        [iconCard]="card.icon"
-        [tittleCard]="card.tittle"
-        [yearCard]="card.year"
-      />
-    }
-    @for (card of cardsPort(); track card.id) {
-      <app-card-port
-        [iconCard]="card.icon"
-        [tittleCard]="card.tittle"
-        [yearCard]="card.year"
-      />
-    }
-  </div>
+	<div class="flex animate-infinite-scroll items-center gap-2">
+		@for (card of cardsPort(); track card.id) {
+			<app-card-port
+				[iconCard]="card.icon"
+				[tittleCard]="card.tittle"
+				[yearCard]="card.year" />
+		}
+		@for (card of cardsPort(); track card.id) {
+			<app-card-port
+				[iconCard]="card.icon"
+				[tittleCard]="card.tittle"
+				[yearCard]="card.year" />
+		}
+	</div>
 </div>

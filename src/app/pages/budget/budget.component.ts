@@ -5,15 +5,15 @@ import { FooterComponent } from "../../components/footer/footer.component";
 import { CardPortListComponent } from "../../components/lists/card-port-list/card-port-list.component";
 
 @Component({
-  selector: "app-budget",
-  imports: [
-    ReactiveFormsModule,
-    OrceButtonComponent,
-    FooterComponent,
-    CardPortListComponent,
-    FooterComponent,
-  ],
-  templateUrl: "./budget.component.html",
-  styleUrl: "./budget.component.css",
+	selector: "app-budget",
+	imports: [
+		ReactiveFormsModule,
+		OrceButtonComponent,
+		FooterComponent,
+		CardPortListComponent,
+		FooterComponent,
+	],
+	templateUrl: "./budget.component.html",
+	styleUrl: "./budget.component.css",
 })
 export class BudgetComponent {}

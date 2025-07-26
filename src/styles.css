@@ -3,48 +3,48 @@
 @import url("https://fonts.cdnfonts.com/css/larsseit-font-family");
 
 @theme {
-  --color-red-primary: #ed1c24;
-  --color-red-secundary: #ef3d4a;
-  --color-red-secundary-opc: rgba(239, 61, 74, 0.5);
-  --color-black-primary: #0c0c0c;
-  --color-gray-primary: #585858;
-  --color-white-primary: #fdfdfd;
+	--color-red-primary: #ed1c24;
+	--color-red-secundary: #ef3d4a;
+	--color-red-secundary-opc: rgba(239, 61, 74, 0.5);
+	--color-black-primary: #0c0c0c;
+	--color-gray-primary: #585858;
+	--color-white-primary: #fdfdfd;
 
-  --color-red-primary-to-red-secundary-vertical-gradient: linear-gradient(
-    180deg,
-    var(--color-red-primary) 0%,
-    var(--color-red-secundary) 100%
-  );
+	--color-red-primary-to-red-secundary-vertical-gradient: linear-gradient(
+		180deg,
+		var(--color-red-primary) 0%,
+		var(--color-red-secundary) 100%
+	);
 
-  --color-red-primary-to-red-secundary-horizontal-gradient: linear-gradient(
-    90deg,
-    var(--color-red-primary) 0%,
-    var(--color-red-secundary) 100%
-  );
+	--color-red-primary-to-red-secundary-horizontal-gradient: linear-gradient(
+		90deg,
+		var(--color-red-primary) 0%,
+		var(--color-red-secundary) 100%
+	);
 
-  --shadow-cardbefore: 0px -2px 30px rgba(0, 0, 0, 0.7);
-  --shadow-cardafter: 0px 2px 30px rgba(0, 0, 0, 0.7);
+	--shadow-cardbefore: 0px -2px 30px rgba(0, 0, 0, 0.7);
+	--shadow-cardafter: 0px 2px 30px rgba(0, 0, 0, 0.7);
 
-  --inset-shadow-carouselleft: inset 30px -10px 30px rgba(0, 0, 0, 1);
-  --inset-shadow-carouselright: inset -30px -10px 30px rgba(0, 0, 0, 1);
+	--inset-shadow-carouselleft: inset 30px -10px 30px rgba(0, 0, 0, 1);
+	--inset-shadow-carouselright: inset -30px -10px 30px rgba(0, 0, 0, 1);
 }
 
 a,
 button,
 h2,
 h3 {
-  font-family: "Larsseit", sans-serif;
+	font-family: "Larsseit", sans-serif;
 }
 
 h1 {
-  font-family: "Larsseit Extrabold", sans-serif;
+	font-family: "Larsseit Extrabold", sans-serif;
 }
 
 p,
 span {
-  font-family: "Roboto Black", sans-serif;
+	font-family: "Roboto Black", sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }

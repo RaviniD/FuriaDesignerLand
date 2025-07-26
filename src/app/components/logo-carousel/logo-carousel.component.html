@@ -1,34 +1,27 @@
 <div class="relative w-[85%] overflow-hidden">
-  <div class="flex animate-infinite-scroll items-center gap-12 md:gap-24">
-    @for (logo of logos(); track logo.id) {
-      <img
-        [src]="logo.src"
-        [alt]="logo.alt"
-        class="md:h-32 object-contain hover:opacity-80 opacity-100 hover:scale-[101%] transition-all duration-500"
-      />
-    }
+	<div class="flex animate-infinite-scroll items-center gap-12 md:gap-24">
+		@for (logo of logos(); track logo.id) {
+			<img
+				[src]="logo.src"
+				[alt]="logo.alt"
+				class="md:h-32 object-contain hover:opacity-80 opacity-100 hover:scale-[101%] transition-all duration-500" />
+		}
 
-    @for (logo of logos(); track logo.id) {
-      <img
-        [src]="logo.src"
-        [alt]="logo.alt"
-        class="md:h-32 object-contain hover:opacity-80 opacity-100 hover:scale-[101%] transition-all duration-500"
-      />
-    }
-  </div>
+		@for (logo of logos(); track logo.id) {
+			<img
+				[src]="logo.src"
+				[alt]="logo.alt"
+				class="md:h-32 object-contain hover:opacity-80 opacity-100 hover:scale-[101%] transition-all duration-500" />
+		}
+	</div>
 
-  <!-- Overlay da vinheta -->
-  <div
-    class="absolute inset-0 inset-shadow-carouselleft inset-shadow-black-primary z-10 pointer-events-none"
-  ></div>
-  <div
-    class="absolute inset-0 inset-shadow-carouselleft inset-shadow-black-primary z-10 pointer-events-none"
-  ></div>
+	<div
+		class="absolute inset-0 inset-shadow-carouselleft inset-shadow-black-primary z-10 pointer-events-none"></div>
+	<div
+		class="absolute inset-0 inset-shadow-carouselleft inset-shadow-black-primary z-10 pointer-events-none"></div>
 
-  <div
-    class="absolute inset-0 inset-shadow-carouselright inset-shadow-black-primary z-10 pointer-events-none"
-  ></div>
-  <div
-    class="absolute inset-0 inset-shadow-carouselright inset-shadow-black-primary z-10 pointer-events-none"
-  ></div>
+	<div
+		class="absolute inset-0 inset-shadow-carouselright inset-shadow-black-primary z-10 pointer-events-none"></div>
+	<div
+		class="absolute inset-0 inset-shadow-carouselright inset-shadow-black-primary z-10 pointer-events-none"></div>
 </div>
