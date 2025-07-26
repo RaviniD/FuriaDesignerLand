@@ -1,4 +1,4 @@
-@reference "../../../styles.css";
+@reference "../../../../styles.css";
 
 a {
 	@apply bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition;

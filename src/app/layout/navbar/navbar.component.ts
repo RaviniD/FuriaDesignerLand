@@ -6,7 +6,7 @@ import {
 	PLATFORM_ID,
 } from "@angular/core";
 import { isPlatformBrowser, ViewportScroller } from "@angular/common";
-import { OrceButtonComponent } from "../orce-button/orce-button.component";
+import { OrceButtonComponent } from "../../shared/buttons/orce-button/orce-button.component";
 import { Router } from "@angular/router";
 
 @Component({

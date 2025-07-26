@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
-import { OrceButtonComponent } from "../../components/orce-button/orce-button.component";
-import { FooterComponent } from "../../components/footer/footer.component";
-import { CardPortListComponent } from "../../components/lists/card-port-list/card-port-list.component";
+import { OrceButtonComponent } from "../../../shared/buttons/orce-button/orce-button.component";
+import { FooterComponent } from "../../../layout/footer/footer.component";
+import { CardPortListComponent } from "../../../shared/cards/lists/card-port-list/card-port-list.component";
 
 @Component({
 	selector: "app-budget",
