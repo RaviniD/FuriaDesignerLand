@@ -1,0 +1,97 @@
+<nav
+	[class]="
+		'fixed top-0 right-0 left-0 z-50 transition-all duration-300 ' +
+		(isVisible ? 'translate-y-0' : '-translate-y-full')
+	"
+	[class.bg-white]="isScrolled"
+	[class.shadow-md]="isScrolled">
+	<div
+		class="container mx-auto flex w-[70%] items-center justify-between px-4 py-3">
+		<div class="flex items-center">
+			<a href="" class="flex items-center">
+				<img src="/imgs/favicon.png" alt="" class="h-12 w-max" />
+			</a>
+
+			<div class="ml-10 hidden space-x-8 md:flex">
+				@if (router.url === "/") {
+					<button (click)="scrollTo('objetivo')" class="links-desk">
+						Objetivo
+					</button>
+				}
+				@if (router.url === "/") {
+					<button (click)="scrollTo('sobre')" class="links-desk">Sobre</button>
+				}
+				@if (router.url === "/") {
+					<button (click)="scrollTo('vitrine')" class="links-desk">
+						Vitrine
+					</button>
+				}
+				@if (router.url === "/") {
+					<button (click)="scrollTo('feedbacks')" class="links-desk">
+						Feedbacks
+					</button>
+				}
+				@if (router.url === "/") {
+					<button (click)="scrollTo('contato')" class="links-desk">
+						Contato
+					</button>
+				}
+
+				@if (router.url !== "/") {
+					<a href="" class="links-desk">Home</a>
+				}
+
+				<svg class="bg-black-primary h-7 w-[0.2rem]"></svg>
+				<a href="portfolio" class="links-desk">Portfólio</a>
+				<a href="budget" class="links-desk">Orçamento</a>
+			</div>
+		</div>
+
+		<div class="flex gap-8">
+			<a class="flex items-center">
+				<img
+					src="/imgs/changelanguage.svg"
+					alt="change language"
+					class="h-4 w-max" />
+			</a>
+
+			<app-orce-button href="/budget"> CRIE SEU ORÇAMENTO </app-orce-button>
+		</div>
+
+		<button class="text-gray-600 focus:outline-none md:hidden">
+			<svg
+				class="h-6 w-6"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24">
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					[attr.d]="
+						isMobileMenuOpen
+							? 'M6 18L18 6M6 6l12 12'
+							: 'M4 6h16M4 12h16M4 18h16'
+					"></path>
+			</svg>
+		</button>
+	</div>
+	<div
+		class="overflow-hidden bg-white shadow-lg transition-all duration-300 md:hidden"
+		[class]="isMobileMenuOpen ? 'max-h-96 py-2' : 'max-h-0'">
+		<div class="container mx-auto flex flex-col space-y-3 px-4">
+			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Home</a>
+			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Sobre</a>
+			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900"
+				>Serviços</a
+			>
+			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900"
+				>Contato</a
+			>
+			<button
+				class="my-2 w-full rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700">
+				Ação
+			</button>
+		</div>
+	</div>
+</nav>

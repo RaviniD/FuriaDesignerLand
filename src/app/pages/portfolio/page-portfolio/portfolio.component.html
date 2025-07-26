@@ -1,0 +1,47 @@
+<div
+	class="container mx-auto mt-[4rem] flex w-[70%] flex-col items-center px-4 py-12 md:flex-row">
+	<div class="mb-10 md:mb-0 md:pr-8">
+		<div class="mb-6 flex">
+			<h1 class="text-7xl">FÚRIA DESIGNER</h1>
+			<h1
+				class="text-red-primary ml-4 text-7xl transition-opacity duration-300">
+				PORTFÓLIO
+			</h1>
+		</div>
+
+		<h2 class="text-black-primary text-lg font-semibold">
+			Deslumbre de nossos produtos.
+		</h2>
+	</div>
+</div>
+<app-card-port-list></app-card-port-list>
+
+<section class="relative mt-[1%] pt-3">
+	<div class="bg-black-primary absolute inset-0 z-0 h-[18rem]"></div>
+
+	<div class="relative z-10 container mx-auto px-4">
+		<app-logo-carousel class="flex h-32 justify-center"></app-logo-carousel>
+
+		<div class="my-10 flex justify-center gap-24">
+			<app-filter-button>Finalizações</app-filter-button>
+			<app-filter-button>Banner Animados</app-filter-button>
+			<app-filter-button>Adaptações</app-filter-button>
+			<app-filter-button>Desdobramentos</app-filter-button>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="mx-auto mt-28 mb-8 flex flex-wrap justify-center gap-8">
+		@for (card of cardsPort(); track card.id) {
+			<div class="w-full sm:w-[45%] md:w-[30%] lg:w-[22%]">
+				<app-card-port
+					[iconCard]="card.icon"
+					[tittleCard]="card.tittle"
+					[yearCard]="card.year" />
+			</div>
+		}
+	</div>
+
+	<app-footer></app-footer>
+</section>
