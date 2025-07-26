@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { CardPortComponent } from './card-port.component';
+import { CardPortComponent } from "./card-port.component";
 
-describe('CardPortComponent', () => {
+describe("CardPortComponent", () => {
   let component: CardPortComponent;
   let fixture: ComponentFixture<CardPortComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardPortComponent]
-    })
-    .compileComponents();
+      imports: [CardPortComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CardPortComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

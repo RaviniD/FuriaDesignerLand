@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'orce-button',
+  selector: "app-orce-button",
   imports: [],
-  templateUrl: './orce-button.component.html',
-  styleUrl: './orce-button.component.css'
+  templateUrl: "./orce-button.component.html",
+  styleUrl: "./orce-button.component.css",
 })
 export class OrceButtonComponent {
   @Input() public type!: string;
@@ -12,5 +12,5 @@ export class OrceButtonComponent {
 
   @Input() public onClick: () => void = () => {
     return;
-};
+  };
 }

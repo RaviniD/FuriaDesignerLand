@@ -1,10 +1,14 @@
 .animate-infinite-scroll {
-    animation: scroll 25s linear infinite;
+  animation: scroll 25s linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  to {
+    transform: translateX(-50%);
   }
-  /* .animate-infinite-scroll:hover {
+}
+/* .animate-infinite-scroll:hover {
     animation-play-state: paused;
   } */

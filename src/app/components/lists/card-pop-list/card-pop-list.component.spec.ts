@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { CardPopListComponent } from './card-pop-list.component';
+import { CardPopListComponent } from "./card-pop-list.component";
 
-describe('CardPopListComponent', () => {
+describe("CardPopListComponent", () => {
   let component: CardPopListComponent;
   let fixture: ComponentFixture<CardPopListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardPopListComponent]
-    })
-    .compileComponents();
+      imports: [CardPopListComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CardPopListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
