@@ -1,0 +1,9 @@
+<div class="my-[8rem] flex items-center justify-center gap-20">
+	@for (card of cardsFeedback(); track card.id) {
+		<app-card-feedback
+			[iconLogoCard]="card.iconLogo"
+			[feedbackTextCard]="card.feedbackText"
+			[iconPersonCard]="card.iconPerson"
+			[ProfessionPersonCard]="card.professionPerson" />
+	}
+</div>

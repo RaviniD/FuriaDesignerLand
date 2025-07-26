@@ -1,8 +1,0 @@
-:host {
-    view-transition-name: slide-tabs;
-  }
-  
-  ::view-transition-old(slide-tabs),
-  ::view-transition-new(slide-tabs) {
-    animation-duration: 0.3s;
-  }
