@@ -1,13 +1,13 @@
-<div class="max-w-5xl min-w-full mx-auto">
-	<div class="flex mb-6 gap-6 justify-center">
+<div class="mx-auto max-w-5xl min-w-full">
+	<div class="mb-6 flex justify-center gap-6">
 		@for (slide of slides(); track slide.id; let i = $index) {
 			<button
 				(click)="currentIndex.set(i)"
-				class="w-[20%] px-6 py-3 text-xl font-bold focus:outline-none transition-colors cursor-pointer"
+				class="w-[20%] cursor-pointer px-6 py-3 text-xl font-bold transition-colors focus:outline-none"
 				[class]="
 					currentIndex() === i
-						? 'border-b-6 border-red-primary text-red-primary transition-all duration-500 hover:inset-shadow-c'
-						: 'border-b-6 border-white-primary text-white-primary hover:opacity-80 transition-all hover:transition-all duration-500'
+						? 'border-red-primary text-red-primary hover:inset-shadow-c border-b-6 transition-all duration-500'
+						: 'border-white-primary text-white-primary border-b-6 transition-all duration-500 hover:opacity-80 hover:transition-all'
 				">
 				{{ slide.tabTitle }}
 			</button>
@@ -15,19 +15,19 @@
 	</div>
 
 	<div
-		class="flex flex-col md:flex-row gap-32 p-6 transition-opacity duration-300 justify-items-center justify-between mx-[15%]">
-		<div class="md:w-2/4 space-y-4">
-			<h2 class="text-3xl font-bold text-white-primary">
+		class="mx-[15%] flex flex-col justify-between justify-items-center gap-32 p-6 transition-opacity duration-300 md:flex-row">
+		<div class="space-y-4 md:w-2/4">
+			<h2 class="text-white-primary text-3xl font-bold">
 				{{ currentSlide.title }}
 			</h2>
 			<p class="text-white-primary">{{ currentSlide.description }}</p>
 			<div class="flex items-center align-middle">
-				<ul class="list-disc pl-5 space-y-2 text-red-secundary">
+				<ul class="text-red-secundary list-disc space-y-2 pl-5">
 					@for (item of currentSlide.items; track item) {
 						<li>{{ item }}</li>
 					}
 				</ul>
-				<img src="imgs/fireslide.svg" alt="fire" class="w-10 ml-8" />
+				<img src="imgs/fireslide.svg" alt="fire" class="ml-8 w-10" />
 			</div>
 		</div>
 
@@ -35,7 +35,7 @@
 			<img
 				[src]="currentSlide.image"
 				[alt]="currentSlide.title"
-				class="w-full h-auto rounded-lg shadow-lg" />
+				class="h-auto w-full rounded-lg shadow-lg" />
 		</div>
 	</div>
 </div>

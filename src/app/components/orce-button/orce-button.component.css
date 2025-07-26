@@ -1,5 +1,5 @@
 @reference "../../../styles.css";
 
 a {
-	@apply flex w-max items-center justify-center bg-red-primary hover:bg-red-secundary text-white px-4 py-2 h-12 rounded-sm transition cursor-pointer;
+	@apply bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition;
 }

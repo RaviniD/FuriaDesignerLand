@@ -1,18 +1,18 @@
 <nav
 	[class]="
-		'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ' +
+		'fixed top-0 right-0 left-0 z-50 transition-all duration-300 ' +
 		(isVisible ? 'translate-y-0' : '-translate-y-full')
 	"
 	[class.bg-white]="isScrolled"
 	[class.shadow-md]="isScrolled">
 	<div
-		class="container w-[70%] mx-auto px-4 py-3 flex justify-between items-center">
+		class="container mx-auto flex w-[70%] items-center justify-between px-4 py-3">
 		<div class="flex items-center">
 			<a href="" class="flex items-center">
 				<img src="/imgs/favicon.png" alt="" class="h-12 w-max" />
 			</a>
 
-			<div class="hidden md:flex space-x-8 ml-10">
+			<div class="ml-10 hidden space-x-8 md:flex">
 				@if (router.url === "/") {
 					<button (click)="scrollTo('objetivo')" class="links-desk">
 						Objetivo
@@ -41,7 +41,7 @@
 					<a href="" class="links-desk">Home</a>
 				}
 
-				<svg class="h-7 w-[0.2rem] bg-black-primary"></svg>
+				<svg class="bg-black-primary h-7 w-[0.2rem]"></svg>
 				<a href="portfolio" class="links-desk">Portfólio</a>
 				<a href="budget" class="links-desk">Orçamento</a>
 			</div>
@@ -58,9 +58,9 @@
 			<app-orce-button href="/budget"> CRIE SEU ORÇAMENTO </app-orce-button>
 		</div>
 
-		<button class="md:hidden text-gray-600 focus:outline-none">
+		<button class="text-gray-600 focus:outline-none md:hidden">
 			<svg
-				class="w-6 h-6"
+				class="h-6 w-6"
 				fill="none"
 				stroke="currentColor"
 				viewBox="0 0 24 24">
@@ -77,9 +77,9 @@
 		</button>
 	</div>
 	<div
-		class="md:hidden bg-white shadow-lg transition-all duration-300 overflow-hidden"
+		class="overflow-hidden bg-white shadow-lg transition-all duration-300 md:hidden"
 		[class]="isMobileMenuOpen ? 'max-h-96 py-2' : 'max-h-0'">
-		<div class="container mx-auto px-4 flex flex-col space-y-3">
+		<div class="container mx-auto flex flex-col space-y-3 px-4">
 			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Home</a>
 			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Sobre</a>
 			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900"
@@ -89,7 +89,7 @@
 				>Contato</a
 			>
 			<button
-				class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition my-2">
+				class="my-2 w-full rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700">
 				Ação
 			</button>
 		</div>

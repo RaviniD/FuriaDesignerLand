@@ -1,5 +1,5 @@
 @reference "../../../styles.css";
 
 .links-desk {
-	@apply text-xs md:text-xs lg:text-sm text-black-primary hover:text-gray-700 flex items-center cursor-pointer;
+	@apply text-black-primary flex cursor-pointer items-center text-xs hover:text-gray-700 md:text-xs lg:text-sm;
 }

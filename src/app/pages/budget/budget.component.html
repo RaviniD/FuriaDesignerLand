@@ -1,15 +1,15 @@
 <div
-	class="container mx-auto w-[70%] mt-[4rem] px-4 py-12 flex flex-col md:flex-row items-center">
+	class="container mx-auto mt-[4rem] flex w-[70%] flex-col items-center px-4 py-12 md:flex-row">
 	<div class="mb-10 md:mb-0 md:pr-8">
-		<div class="flex mb-6">
+		<div class="mb-6 flex">
 			<h1 class="text-7xl">FÚRIA DESIGNER</h1>
 			<h1
-				class="text-7xl text-red-primary ml-4 transition-opacity duration-300">
+				class="text-red-primary ml-4 text-7xl transition-opacity duration-300">
 				ORÇAMENTO
 			</h1>
 		</div>
 
-		<h2 class="text-lg text-black-primary font-semibold">
+		<h2 class="text-black-primary text-lg font-semibold">
 			Faça o seu orçamento conosco! É no precinho.
 		</h2>
 	</div>
@@ -18,9 +18,9 @@
 <form
 	action="https://formsubmit.co/vini.dos.s.p@gmail.com"
 	method="POST"
-	class="max-w-2/5 mx-auto p-6 bg-black-primary rounded-lg shadow-md space-y-4">
+	class="bg-black-primary mx-auto max-w-2/5 space-y-4 rounded-lg p-6 shadow-md">
 	<h2
-		class="flex justify-center text-center text-white text-3xl font-bold mt-1 mb-10 px-12">
+		class="mt-1 mb-10 flex justify-center px-12 text-center text-3xl font-bold text-white">
 		PREENCHA PARA SOLICITAR O NOSSO SERVIÇO E JÁ TE ATENDEMOS!
 	</h2>
 
@@ -28,7 +28,7 @@
 		<div class="space-y-1">
 			<label
 				for="name"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>Nome Completo<span class="text-red-secundary ml-1">*</span></label
 			>
 			<input
@@ -36,13 +36,13 @@
 				name="name"
 				id="name"
 				required
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300" />
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
 			<label
 				for="email"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>E-mail<span class="text-red-secundary ml-1">*</span></label
 			>
 			<input
@@ -50,13 +50,13 @@
 				name="email"
 				id="email"
 				required
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300 invalid:text-red-700" />
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 invalid:text-red-700 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
 			<label
 				for="telefone"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>Telefone<span class="text-red-secundary ml-1">*</span></label
 			>
 			<input
@@ -65,8 +65,8 @@
 				id="telefone"
 				required
 				pattern="\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}"
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300" />
-			<p class="text-xs text-gray-primary">
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+			<p class="text-gray-primary text-xs">
 				Formato: (99) 99999-9999 ou 99 9999-9999
 			</p>
 		</div>
@@ -74,7 +74,7 @@
 		<div class="space-y-1">
 			<label
 				for="cargo"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>Cargo<span class="text-red-secundary ml-1">*</span></label
 			>
 			<input
@@ -82,13 +82,13 @@
 				name="cargo"
 				id="cargo"
 				required
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300" />
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
 			<label
 				for="linkEmpresa"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>Link da Empresa<span class="text-red-secundary ml-1">*</span></label
 			>
 			<input
@@ -97,39 +97,39 @@
 				id="linkEmpresa"
 				required
 				placeholder="https://"
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300" />
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
 			<label
 				for="service"
-				class="block text-sm font-medium text-white-primary hover:underline"
+				class="text-white-primary block text-sm font-medium hover:underline"
 				>Tipo de Serviço<span class="text-red-secundary ml-1">*</span></label
 			>
 			<select
 				name="service"
 				id="service"
 				required
-				class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300">
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none">
 				<option value="" disabled selected class="text-black-primary">
 					Selecione um Serviço
 				</option>
 				<option
 					value="Arte Finalizacao"
-					class="font-semibold text-black-primary">
+					class="text-black-primary font-semibold">
 					Arte-Finalização
 				</option>
 				<option
 					value="Animacao de Banners"
-					class="font-semibold text-black-primary">
+					class="text-black-primary font-semibold">
 					Animação de Banners
 				</option>
 				<option
 					value="Adaptacao e Desdobramento"
-					class="font-semibold text-black-primary">
+					class="text-black-primary font-semibold">
 					Adaptação e Desdobramento
 				</option>
-				<option value="Social Video" class="font-semibold text-black-primary">
+				<option value="Social Video" class="text-black-primary font-semibold">
 					Social Vídeo
 				</option>
 				<option value="Outro" class="text-black-primary">Outro...</option>
@@ -140,7 +140,7 @@
 	<div class="space-y-1">
 		<label
 			for="desc"
-			class="block text-sm font-medium text-white-primary hover:underline"
+			class="text-white-primary block text-sm font-medium hover:underline"
 			>Descrição do Serviço</label
 		>
 		<textarea
@@ -148,11 +148,11 @@
 			name="desc"
 			id="desc"
 			rows="2"
-			class="w-full px-3 py-2 border-b-4 border-b-red-secundary rounded-sm focus:outline-none focus:border-b-red-secundary focus:shadow-sm focus:shadow-red-secundary text-gray-300"></textarea>
+			class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none"></textarea>
 	</div>
 
 	<div class="flex items-start">
-		<div class="flex items-center h-5">
+		<div class="flex h-5 items-center">
 			<input
 				type="checkbox"
 				name="AceitaPolítica"
@@ -161,7 +161,7 @@
 				class="h-4 w-4" />
 		</div>
 		<div class="ml-3 text-sm">
-			<label for="AceitPolitica" class="font-medium text-gray-primary">
+			<label for="AceitPolitica" class="text-gray-primary font-medium">
 				Aceito a política de privacidade <span class="text-gray-400">*</span>
 			</label>
 		</div>
@@ -172,15 +172,15 @@
 	<input type="hidden" name="_template" value="table" />
 	<input type="hidden" name="_subject" value="Novo Contato - Formulário Site" />
 
-	<div class="flex justify-center align-middle items-center">
+	<div class="flex items-center justify-center align-middle">
 		<app-orce-button type="submit"> SOLICITE ORÇAMENTO </app-orce-button>
 	</div>
 </form>
 
-<h2 class="flex justify-center text-black-primary text-6xl font-bold my-14">
+<h2 class="text-black-primary my-14 flex justify-center text-6xl font-bold">
 	ENTRE NESSA GALERIA
 </h2>
 
 <app-card-port-list> </app-card-port-list>
-<div class="w-full my-14"></div>
+<div class="my-14 w-full"></div>
 <app-footer></app-footer>

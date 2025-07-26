@@ -1,5 +1,5 @@
 @reference "../../../styles.css";
 
 button {
-	@apply px-10 md:block w-max bg-white-primary hover:bg-red-primary text-black-primary hover:text-white-primary px-4 py-2 h-12 rounded-sm transition;
+	@apply bg-white-primary hover:bg-red-primary text-black-primary hover:text-white-primary h-12 w-max rounded-sm px-10 py-2 transition md:block;
 }
