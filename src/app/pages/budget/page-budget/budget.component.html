@@ -18,7 +18,9 @@
 <form
 	action="https://formsubmit.co/vini.dos.s.p@gmail.com"
 	method="POST"
-	class="bg-black-primary mx-auto max-w-2/5 space-y-4 rounded-lg p-6 shadow-md">
+	class="bg-black-primary mx-auto max-w-2/5 space-y-4 rounded-lg p-6 shadow-md"
+	#contactForm
+	(submit)="onSubmit($event)">
 	<h2
 		class="mt-1 mb-10 flex justify-center px-12 text-center text-3xl font-bold text-white">
 		PREENCHA PARA SOLICITAR O NOSSO SERVIÇO E JÁ TE ATENDEMOS!
@@ -85,20 +87,7 @@
 				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
 		</div>
 
-		<div class="space-y-1">
-			<label
-				for="linkEmpresa"
-				class="text-white-primary block text-sm font-medium hover:underline"
-				>Link da Empresa<span class="text-red-secundary ml-1">*</span></label
-			>
-			<input
-				type="url"
-				name="linkEmpresa"
-				id="linkEmpresa"
-				required
-				placeholder="https://"
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
-		</div>
+
 
 		<div class="space-y-1">
 			<label
@@ -135,6 +124,20 @@
 				<option value="Outro" class="text-black-primary">Outro...</option>
 			</select>
 		</div>
+
+		<div class="space-y-1">
+			<label
+				for="linkEmpresa"
+				class="text-white-primary block text-sm font-medium hover:underline"
+				>Link da Empresa</label
+			>
+			<input
+				type="url"
+				name="linkEmpresa"
+				id="linkEmpresa"
+				placeholder="https://"
+				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+		</div>
 	</div>
 
 	<div class="space-y-1">
@@ -151,31 +154,26 @@
 			class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none"></textarea>
 	</div>
 
-	<div class="flex items-start">
-		<div class="flex h-5 items-center">
-			<input
-				type="checkbox"
-				name="AceitaPolítica"
-				id="AceitPolitica"
-				required
-				class="h-4 w-4" />
-		</div>
-		<div class="ml-3 text-sm">
-			<label for="AceitPolitica" class="text-gray-primary font-medium">
-				Aceito a política de privacidade <span class="text-gray-400">*</span>
-			</label>
-		</div>
-	</div>
-
 	<input type="hidden" name="_captcha" value="false" />
-	<input type="hidden" name="_next" value="https://furiadesigner.com.br" />
 	<input type="hidden" name="_template" value="table" />
 	<input type="hidden" name="_subject" value="Novo Contato - Formulário Site" />
+	<input type="hidden" name="_next" value="https://furiadesigner.com.br" />
 
-	<div class="flex items-center justify-center align-middle">
-		<app-orce-button type="submit"> SOLICITE ORÇAMENTO </app-orce-button>
+	<div class="flex items-center justify-center align-middle mt-2">
+		<button type="submit" [disabled]="isLoading" class="bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition">
+			@if (isLoading) {
+			<span class="font-bold">Enviando...</span>
+		  } @else {
+			<span class="font-bold">SOLICITE ORÇAMENTO</span>
+		  } </button>
 	</div>
 </form>
+
+<app-confirm-modal
+  [isVisible]="showSuccessModal" 
+  (closed)="closeModal()">
+</app-confirm-modal>
+
 
 <h2 class="text-black-primary my-14 flex justify-center text-6xl font-bold">
 	ENTRE NESSA GALERIA

@@ -1,0 +1,31 @@
+@if (isVisible) {
+    <div class="fixed inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center z-50 p-4" 
+        [class]="{'hidden': !isVisible}">
+      <div class="bg-white-primary rounded-md shadow-xl max-w-xl w-full p-6 mx-4">
+        
+        <div class="flex justify-center mb-4">
+          <h3 class="text-3xl font-bold text-gray-800">SUCESSO!</h3>
+        </div>
+        
+        
+        <div class="mb-6">
+          <div class="flex items-center justify-center mb-4">
+            <img src="imgs/confirm.svg" alt="icon confirm" class="h-18 w-auto">
+          </div>
+          <p class="text-gray-700 text-center text-xl font-bold uppercase">foi enviada a sua solicitação,</p>
+          <p class="text-gray-500 text-sm text-center mt-2 uppercase font-bold">Agradecemos e Entraremos em contato em breve...</p>
+          <p class="text-gray-400 text-xs text-center mt-2 uppercase font-bold">-Fúria Designer</p>
+
+        </div>
+        
+        
+        <div class="flex justify-center">
+          <app-orce-button 
+            (click)="close()"
+          >
+            ENTENDIDO!
+          </app-orce-button>
+        </div>
+      </div>
+    </div>
+  }
