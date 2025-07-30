@@ -6,6 +6,7 @@ interface CardPort {
 	id: number;
 	title: string;
 	year: string;
+	topic: string;
 	images: string[];
   }
 
@@ -27,7 +28,8 @@ export class CardPortComponent {
 			"imgs/products-port/portProduct2_2.png",
 		],
 		title:
-			"MOVADO | CAMPANHA: TOMMY HILFIGER PA SITE VIVARA | ADAPTAÇÃO DE FORMATO",
+			"MOVADO | CAMPANHA: TOMMY HILFIGER PA SITE VIVARA",
+			topic :"| ADAPTAÇÃO DE FORMATO" ,
 		year: "2023",
 	},
 	{
@@ -37,7 +39,9 @@ export class CardPortComponent {
 			"imgs/products-port/portProduct4_.png2"
 		],
 		title:
-			"MOVADO | CAMPANHA: TOMMY HILFIGER DIA DAS MÃES | CRIAÇÃO E ADAPTAÇÃO DE FORMATO ",
+			"MOVADO | CAMPANHA: TOMMY HILFIGER DIA DAS MÃES",
+						topic :"| ADAPTAÇÃO DE FORMATO" ,
+
 		year: "2018",
 	},
 	{
@@ -46,7 +50,8 @@ export class CardPortComponent {
 			"imgs/products-port/portProduct3_1.png",
 			"imgs/products-port/portProduct3_.png2"
 		],
-		title: "CAMPANHAS: AIR WICK | ADAPTAÇÃO DE FORMATO E ANIMAÇÃO",
+		title: "CAMPANHAS: AIR WICK",
+					topic :"ADAPTAÇÃO DE FORMATO E ANIMAÇÃO" ,
 		year: "2020",
 	},
 	{
@@ -54,7 +59,9 @@ export class CardPortComponent {
 		images: ["imgs/products-port/portProduct5_0.png",
 			"imgs/products-port/portProduct5_.png1"
 		],
-		title: "EMBALAGENS: OAKBERRY | ADAPTAÇÃO, DIAGRAMAÇÃO E FINALIZAÇÃO ",
+		title: "EMBALAGENS: OAKBERRY",
+					topic :"ADAPTAÇÃO, DIAGRAMAÇÃO E FINALIZAÇÃO" ,
+
 		year: "2025",
 	},
 ];
