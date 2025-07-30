@@ -1,15 +1,28 @@
-<div
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+
+@for (cardPort of cardsPort; track cardPort.id) {
+
+<div (click)="openModal(cardPort)"
 	class="flex w-[25rem] items-center justify-center rounded-sm transition-all duration-500 hover:scale-[101%]">
 	<div>
 		<img
-			[src]="iconCard"
+			[src]="cardPort.images[0]"
 			alt="icon-card-pop "
 			class="size-[25rem] rounded-lg object-cover transition-all hover:shadow-lg" />
-		<a
-			[href]="href"
+		<h3
 			class="text-black-primary cursos-pointer my-4 text-2xl font-bold">
-			{{ tittleCard }}
-		</a>
-		<h3 class="text-red-primary text-base font-extrabold">{{ yearCard }}</h3>
+			{{ cardPort.title }}
+		</h3>
+		<span class="text-red-primary text-base font-extrabold">{{ cardPort.year }}</span>
 	</div>
 </div>
+}
+
+<app-product-view-modal
+	[isOpen]="modalOpen" 
+	(closed)="modalOpen = false"
+	[cardsPortImages]="selectedCardsPort?.images || []"
+	[cardsPortTitle]="selectedCardsPort?.title || ''"
+	[cardsPortYear]="selectedCardsPort?.year || ''">
+</app-product-view-modal>

@@ -1,31 +1,30 @@
 @if (isVisible) {
-    <div class="fixed inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center z-50 p-4" 
-        [class]="{'hidden': !isVisible}">
-      <div class="bg-white-primary rounded-md shadow-xl max-w-xl w-full p-6 mx-4">
-        
-        <div class="flex justify-center mb-4">
-          <h3 class="text-3xl font-bold text-gray-800">SUCESSO!</h3>
-        </div>
-        
-        
-        <div class="mb-6">
-          <div class="flex items-center justify-center mb-4">
-            <img src="imgs/confirm.svg" alt="icon confirm" class="h-18 w-auto">
-          </div>
-          <p class="text-gray-700 text-center text-xl font-bold uppercase">foi enviada a sua solicitação,</p>
-          <p class="text-gray-500 text-sm text-center mt-2 uppercase font-bold">Agradecemos e Entraremos em contato em breve...</p>
-          <p class="text-gray-400 text-xs text-center mt-2 uppercase font-bold">-Fúria Designer</p>
+	<div
+		class="fixed inset-0 z-50 flex items-center justify-center bg-white/60 p-4 backdrop-blur-sm"
+		[class]="{ hidden: !isVisible }">
+		<div class="bg-white-primary mx-4 w-full max-w-xl rounded-md p-6 shadow-xl">
+			<div class="mb-4 flex justify-center">
+				<h3 class="text-3xl font-bold text-gray-800">SUCESSO!</h3>
+			</div>
 
-        </div>
-        
-        
-        <div class="flex justify-center">
-          <app-orce-button 
-            (click)="close()"
-          >
-            ENTENDIDO!
-          </app-orce-button>
-        </div>
-      </div>
-    </div>
-  }
+			<div class="mb-6">
+				<div class="mb-4 flex items-center justify-center">
+					<img src="imgs/confirm.svg" alt="icon confirm" class="h-18 w-auto" />
+				</div>
+				<p class="text-center text-xl font-bold text-gray-700 uppercase">
+					foi enviada a sua solicitação,
+				</p>
+				<p class="mt-2 text-center text-sm font-bold text-gray-500 uppercase">
+					Agradecemos e Entraremos em contato em breve...
+				</p>
+				<p class="mt-2 text-center text-xs font-bold text-gray-400 uppercase">
+					-Fúria Designer
+				</p>
+			</div>
+
+			<div class="flex justify-center">
+				<app-orce-button (click)="close()"> ENTENDIDO! </app-orce-button>
+			</div>
+		</div>
+	</div>
+}

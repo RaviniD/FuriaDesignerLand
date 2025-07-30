@@ -1,0 +1,48 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+@if (isOpen) {
+<div class="fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <!-- Fundo escuro -->
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true" (click)="closeModal()">
+        <div class="absolute inset-0 bg-black-primary opacity-70 backdrop-blur-sm"></div>
+      </div>
+  
+      <!-- Conteúdo do Modal -->
+      <div class="inline-block align-bottom bg-white rounded-sm text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <!-- Botão de fechar -->
+          <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          <!-- Galeria de imagens -->
+          <div class="mb-4">
+            <img [src]="currentImage" class="w-full h-auto max-h-96 object-contain" alt="Product image">
+          </div>
+          
+          <!-- Miniaturas -->
+          <div class="flex space-x-2 overflow-x-auto py-2">
+            @for (image of cardsPortImages; track image){
+            <img 
+                 [src]="image" 
+                 (click)="currentImage = image"
+                 class="h-16 w-16 object-cover cursor-pointer border-2"
+                 [class.border-blue-500]="image === currentImage"
+                 [class.border-transparent]="image !== currentImage"
+                 alt="imgs cardsPort">
+            }
+          </div>
+          
+          <!-- Detalhes do produto -->
+          <div class="mt-4">
+            <h3 class="text-lg font-medium text-gray-900">{{cardsPortTitle}}</h3>
+            <p class="text-gray-600">{{cardsPortYear}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

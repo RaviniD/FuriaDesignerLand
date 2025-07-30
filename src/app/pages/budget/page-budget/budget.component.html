@@ -87,8 +87,6 @@
 				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
 		</div>
 
-
-
 		<div class="space-y-1">
 			<label
 				for="service"
@@ -159,21 +157,22 @@
 	<input type="hidden" name="_subject" value="Novo Contato - Formulário Site" />
 	<input type="hidden" name="_next" value="https://furiadesigner.com.br" />
 
-	<div class="flex items-center justify-center align-middle mt-2">
-		<button type="submit" [disabled]="isLoading" class="bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition">
+	<div class="mt-2 flex items-center justify-center align-middle">
+		<button
+			type="submit"
+			[disabled]="isLoading"
+			class="bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition">
 			@if (isLoading) {
-			<span class="font-bold">Enviando...</span>
-		  } @else {
-			<span class="font-bold">SOLICITE ORÇAMENTO</span>
-		  } </button>
+				<span class="font-bold">Enviando...</span>
+			} @else {
+				<span class="font-bold">SOLICITE ORÇAMENTO</span>
+			}
+		</button>
 	</div>
 </form>
 
-<app-confirm-modal
-  [isVisible]="showSuccessModal" 
-  (closed)="closeModal()">
+<app-confirm-modal [isVisible]="showSuccessModal" (closed)="closeModal()">
 </app-confirm-modal>
-
 
 <h2 class="text-black-primary my-14 flex justify-center text-6xl font-bold">
 	ENTRE NESSA GALERIA

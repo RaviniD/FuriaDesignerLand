@@ -33,14 +33,10 @@
 
 <section>
 	<div class="mx-auto mt-28 mb-8 flex flex-wrap justify-center gap-8">
-		@for (card of cardsPort(); track card.id) {
 			<div class="w-full sm:w-[45%] md:w-[30%] lg:w-[22%]">
-				<app-card-port
-					[iconCard]="card.icon"
-					[tittleCard]="card.tittle"
-					[yearCard]="card.year" />
+				<app-card-port/>
 			</div>
-		}
+		
 	</div>
 
 	<app-footer></app-footer>
