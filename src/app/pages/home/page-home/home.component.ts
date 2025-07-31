@@ -6,6 +6,7 @@ import { SlideInfoComponent } from "../components-home/slide-info/slide-info.com
 import { CardPortListComponent } from "../../../shared/cards/lists/card-port-list/card-port-list.component";
 import { CardFeedbackListComponent } from "../../../shared/cards/lists/card-feedback-list/card-feedback-list.component";
 import { FooterComponent } from "../../../layout/footer/footer.component";
+import { TextChangerComponent } from "../components-home/text-changer/text-changer.component";
 // import { TextChangerComponent } from "../../components/text-changer/text-changer.component";
 
 @Component({
@@ -18,6 +19,7 @@ import { FooterComponent } from "../../../layout/footer/footer.component";
 		CardPortListComponent,
 		CardFeedbackListComponent,
 		FooterComponent,
+		TextChangerComponent,
 	],
 	templateUrl: "./home.component.html",
 	styleUrl: "./home.component.css",

@@ -1,0 +1,68 @@
+@if (isOpen) {
+	<!-- Overlay -->
+	<div
+		class="bg-black-primary fixed inset-0 z-40 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
+		[class]="isOpen ? 'opacity-70' : 'opacity-0'"
+		(click)="closeModal()"
+		aria-hidden="true"></div>
+
+	<!-- Container do Modal -->
+	<div
+		class="fixed inset-0 z-50 overflow-y-auto transition-opacity duration-300 ease-in-out"
+		[class]="isOpen ? 'opacity-100' : 'opacity-0'">
+		<div
+			class="flex min-h-screen items-start justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+			<!-- Botão de fechar -->
+			<button
+				(click)="closeModal()"
+				class="text-white-primary bg-black-primary fixed top-12 right-8 z-50 cursor-pointer rounded-full p-2 opacity-60 hover:opacity-80">
+				<svg
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+
+			<!-- Conteúdo do Modal -->
+			<div
+				class="relative inline-block w-full max-w-2/3 transform overflow-hidden text-left align-bottom transition-all sm:my-8 sm:align-middle">
+				<!-- Container principal com rolagem -->
+				<div
+					class="scrollbar-transparent max-h-[93vh] overflow-hidden overflow-y-auto p-4">
+					<!-- Galeria vertical -->
+					<div class="space-y-2">
+						@for (image of cardsPortImages; track image) {
+							<div class="w-full">
+								<img
+									[src]="image"
+									class="h-auto w-full rounded-sm object-contain shadow-sm"
+									alt="Product image"
+									loading="lazy" />
+							</div>
+						}
+
+						<div class="bg-black-primary sticky z-10 rounded-sm border-b p-10">
+							<h3 class="text-white-primary text-center text-5xl font-medium">
+								{{ cardsPortTitle }}
+							</h3>
+							<p
+								class="text-gray-primary mt-4 text-center text-2xl font-semibold">
+								{{ cardsPortTopic }}
+							</p>
+							<p
+								class="text-red-secundary mt-8 text-center text-lg font-semibold">
+								{{ cardsPortYear }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
