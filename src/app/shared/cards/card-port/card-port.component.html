@@ -17,7 +17,7 @@
       {{ cardPort.title }}
     </h3>
     <h4 class="text-black-primary text-sm font-semibold mb-1">
-      {{ cardPort.topic }}
+      | {{ cardPort.topic }}
     </h4>
     <span class="text-red-primary text-xs font-extrabold">
       {{ cardPort.year }}
@@ -31,5 +31,6 @@
 	(closed)="modalOpen = false"
 	[cardsPortImages]="selectedCardsPort?.images || []"
 	[cardsPortTitle]="selectedCardsPort?.title || ''"
+  [cardsPortTopic]="selectedCardsPort?.topic || ''"
 	[cardsPortYear]="selectedCardsPort?.year || ''">
 </app-product-view-modal>

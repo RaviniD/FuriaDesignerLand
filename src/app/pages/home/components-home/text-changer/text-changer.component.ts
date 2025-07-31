@@ -1,9 +1,7 @@
-import { Component } from "@angular/core";
-
+import { Component } from '@angular/core';
 @Component({
-	selector: "app-text-changer",
-	imports: [],
-	templateUrl: "./text-changer.component.html",
-	styleUrl: "./text-changer.component.css",
+  selector: 'app-text-changer',
+  templateUrl: "./text-changer.component.html",
+  styleUrl: "./text-changer.component.css",
 })
 export class TextChangerComponent {}

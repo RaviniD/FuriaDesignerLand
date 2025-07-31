@@ -1,0 +1,21 @@
+/* No seu styles.css global */
+body.modal-open {
+    overflow: hidden;
+  }
+
+  .scrollbar-transparent::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollbar-transparent::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-transparent::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
+  }
+  
+  .scrollbar-transparent::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }

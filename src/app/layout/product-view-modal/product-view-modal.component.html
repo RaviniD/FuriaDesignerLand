@@ -1,49 +1,54 @@
-<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 
 @if (isOpen) {
-<div class="fixed inset-0 z-50 overflow-y-auto">
-    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-      <!-- Fundo escuro -->
-      <div class="fixed inset-0 transition-opacity" aria-hidden="true" (click)="closeModal()">
-        <div class="absolute inset-0 bg-black-primary opacity-70 backdrop-blur-sm"></div>
-      </div>
+	<!-- Overlay -->
+	<div 
+	  class="fixed inset-0 bg-black-primary backdrop-blur-sm z-40 transition-opacity duration-300 ease-in-out"
+	  [class]="isOpen ? 'opacity-70' : 'opacity-0'"
+	  (click)="closeModal()"
+	  aria-hidden="true"
+	></div>
   
-      <!-- Conteúdo do Modal -->
-      <div class="inline-block align-bottom bg-white rounded-sm text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <!-- Botão de fechar -->
-          <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          
-          <!-- Galeria de imagens -->
-          <div class="mb-4">
-            <img [src]="currentImage" class="w-full h-auto max-h-96 object-contain" alt="Product image">
-          </div>
-          
-          <!-- Miniaturas -->
-          <div class="flex space-x-2 overflow-x-auto py-2">
-            @for (image of cardsPortImages; track image){
-            <img 
-                 [src]="image" 
-                 (click)="currentImage = image"
-                 class="h-16 w-16 object-cover cursor-pointer border-2"
-                 [class.border-blue-500]="image === currentImage"
-                 [class.border-transparent]="image !== currentImage"
-                 alt="imgs cardsPort">
-            }
-          </div>
-          
-          <!-- Detalhes do produto -->
-          <div class="mt-4">
-            <h3 class="text-lg font-medium text-gray-900">{{cardsPortTitle}}</h3>
-            <p class="text-gray-600">{{cardsPortYear}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-}
+	<!-- Container do Modal -->
+	<div class="fixed inset-0 z-50 overflow-y-auto transition-opacity duration-300 ease-in-out"
+	[class]="isOpen ? 'opacity-100' : 'opacity-0'">
+	  <div class="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+		<!-- Botão de fechar -->
+		<button 
+		  (click)="closeModal()" 
+		  class="fixed top-12 right-8 text-white-primary hover:opacity-80 cursor-pointer z-50 bg-black-primary opacity-60 rounded-full p-2"
+		>
+		  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+		  </svg>
+		</button>
+  
+		<!-- Conteúdo do Modal -->
+		<div class="inline-block align-bottom  text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle w-full max-w-2/3 relative">
+
+  
+		  <!-- Container principal com rolagem -->
+		  <div class="max-h-[93vh] overflow-y-auto p-4 overflow-hidden scrollbar-transparent">
+			<!-- Galeria vertical -->
+			<div class="space-y-2">
+			  @for (image of cardsPortImages; track image) {
+				<div class="w-full">
+				  <img 
+					[src]="image" 
+					class="w-full h-auto object-contain rounded-sm shadow-sm"
+					alt="Product image"
+					loading="lazy"
+				  >
+				</div>
+			  }
+			  
+			  <div class="sticky  z-10 p-10 border-b bg-black-primary rounded-sm">
+				<h3 class="text-5xl text-center font-medium text-white-primary">{{cardsPortTitle}}</h3>
+				<p class="text-gray-primary text-center font-semibold mt-4 text-2xl">{{cardsPortTopic}}</p>
+				<p class="text-red-secundary text-center font-semibold mt-8 text-lg">{{cardsPortYear}}</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  }
