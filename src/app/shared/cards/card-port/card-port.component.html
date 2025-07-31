@@ -2,35 +2,32 @@
 <!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 
 @for (cardPort of cardsPort; track cardPort.id) {
-
-<div
-  (click)="openModal(cardPort)"
-  class="w-[25rem] rounded-sm hover:scale-[101%] transition-transform duration-500 cursor-pointer"
->
-  <img
-    [src]="cardPort.images[0]"
-    alt="icon-card-pop"
-    class="size-[25rem] rounded-lg object-cover shadow-md"
-  />
-  <div class=" py-4 pr-4">
-    <h3 class="text-black-primary text-2xl font-bold mb-2">
-      {{ cardPort.title }}
-    </h3>
-    <h4 class="text-black-primary text-sm font-semibold mb-1">
-      | {{ cardPort.topic }}
-    </h4>
-    <span class="text-red-primary text-xs font-extrabold">
-      {{ cardPort.year }}
-    </span>
-  </div>
-</div>
+	<div
+		(click)="openModal(cardPort)"
+		class="w-[25rem] cursor-pointer rounded-sm transition-transform duration-500 hover:scale-[101%]">
+		<img
+			[src]="cardPort.images[0]"
+			alt="icon-card-pop"
+			class="size-[25rem] rounded-lg object-cover shadow-md" />
+		<div class="py-4 pr-4">
+			<h3 class="text-black-primary mb-2 text-2xl font-bold">
+				{{ cardPort.title }}
+			</h3>
+			<h4 class="text-black-primary mb-1 text-sm font-semibold">
+				| {{ cardPort.topic }}
+			</h4>
+			<span class="text-red-primary text-xs font-extrabold">
+				{{ cardPort.year }}
+			</span>
+		</div>
+	</div>
 }
 
 <app-product-view-modal
-	[isOpen]="modalOpen" 
+	[isOpen]="modalOpen"
 	(closed)="modalOpen = false"
 	[cardsPortImages]="selectedCardsPort?.images || []"
 	[cardsPortTitle]="selectedCardsPort?.title || ''"
-  [cardsPortTopic]="selectedCardsPort?.topic || ''"
+	[cardsPortTopic]="selectedCardsPort?.topic || ''"
 	[cardsPortYear]="selectedCardsPort?.year || ''">
 </app-product-view-modal>

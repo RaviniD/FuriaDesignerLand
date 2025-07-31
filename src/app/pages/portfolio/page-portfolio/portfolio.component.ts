@@ -19,5 +19,4 @@ import { FooterComponent } from "../../../layout/footer/footer.component";
 	templateUrl: "./portfolio.component.html",
 	styleUrl: "./portfolio.component.css",
 })
-export class PortfolioComponent {
-}
+export class PortfolioComponent {}

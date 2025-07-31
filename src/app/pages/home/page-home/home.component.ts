@@ -12,15 +12,15 @@ import { TextChangerComponent } from "../components-home/text-changer/text-chang
 @Component({
 	selector: "app-home",
 	imports: [
-    OrceButtonComponent,
-    CardPopListComponent,
-    LogoCarouselComponent,
-    SlideInfoComponent,
-    CardPortListComponent,
-    CardFeedbackListComponent,
-    FooterComponent,
-    TextChangerComponent
-],
+		OrceButtonComponent,
+		CardPopListComponent,
+		LogoCarouselComponent,
+		SlideInfoComponent,
+		CardPortListComponent,
+		CardFeedbackListComponent,
+		FooterComponent,
+		TextChangerComponent,
+	],
 	templateUrl: "./home.component.html",
 	styleUrl: "./home.component.css",
 })

@@ -8,5 +8,4 @@ import { CardPortComponent } from "../../card-port/card-port.component";
 	templateUrl: "./card-port-list.component.html",
 	styleUrl: "./card-port-list.component.css",
 })
-export class CardPortListComponent {
-}
+export class CardPortListComponent {}
