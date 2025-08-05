@@ -1,34 +1,42 @@
 @import url("https://fonts.cdnfonts.com/css/larsseit-font-family");
 
-h1, span {
+h1,
+span {
 	font-family: "Larsseit Extrabold", sans-serif;
 }
 
 .rotating-words {
-    min-width: 120px;
-    display: inline-block;
-    position:absolute;
+	min-width: 120px;
+	display: inline-block;
+	position: absolute;
 
-    b {
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.5s ease ease;
-        
-        &.active {
-            position: relative;
-            opacity: 1;
-            transition: opacity 0.5s ease, transform 0.5s 0.5s;
-            animation: bounce 0.5s;
-            transform: translateY(0);
-        }
-    }
+	b {
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transform: translateY(10px);
+		transition: opacity 0.5s ease ease;
+
+		&.active {
+			position: relative;
+			opacity: 1;
+			transition:
+				opacity 0.5s ease,
+				transform 0.5s 0.5s;
+			animation: bounce 0.5s;
+			transform: translateY(0);
+		}
+	}
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
+}
