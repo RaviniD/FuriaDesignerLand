@@ -6,92 +6,74 @@
 	[class.bg-white]="isScrolled"
 	[class.shadow-md]="isScrolled">
 	<div
-		class="container mx-auto flex w-[70%] items-center justify-between px-4 py-3">
+		class="container mx-auto flex lg:w-[70%] items-center justify-between px-4 py-3">
 		<div class="flex items-center">
 			<a href="" class="flex items-center">
-				<img src="/imgs/favicon.png" alt="" class="h-12 w-max" />
+				<img src="/imgs/favicon.png" alt="logo fúria designer" class="h-12 object-cover" />
 			</a>
 
-			<div class="ml-10 hidden space-x-8 md:flex">
-				@if (router.url === "/") {
-					<button (click)="scrollTo('objetivo')" class="links-desk">
-						Objetivo
-					</button>
-				}
+			<div class="ml-3 space-x-8 flex">
+				<div class="space-x-8 flex max-[60rem]:hidden">
+
+					
+					<div class="space-x-8 flex max-[85rem]:hidden">
+					@if (router.url === "/") {
+						<button (click)="scrollTo('objetivo')" class="links-desk">
+							Objetivo
+						</button>
+					}
+				</div>
 				@if (router.url === "/") {
 					<button (click)="scrollTo('sobre')" class="links-desk">Sobre</button>
 				}
+				<div class="space-x-8 flex max-[90rem]:hidden">
 				@if (router.url === "/") {
-					<button (click)="scrollTo('vitrine')" class="links-desk">
+					<button (click)="scrollTo('vitrine')" class="links-desk ">
 						Vitrine
 					</button>
 				}
+				</div>
+				<div class="space-x-8 flex max-[73rem]:hidden">
 				@if (router.url === "/") {
 					<button (click)="scrollTo('feedbacks')" class="links-desk">
 						Feedbacks
 					</button>
 				}
+				</div>
 				@if (router.url === "/") {
 					<button (click)="scrollTo('contato')" class="links-desk">
 						Contato
 					</button>
 				}
-
+			</div>
+				<!-- <div class="max-[35rem]:hidden flex"> -->
 				@if (router.url !== "/") {
-					<a href="" class="links-desk">Home</a>
+					<a href="" class="links-desk ">Home</a>
 				}
+			<!-- </div> -->
 
-				<svg class="bg-black-primary h-7 w-[0.2rem]"></svg>
+				<svg class="bg-black-primary h-7 w-1 max-[39rem]:hidden"></svg>
+				@if (router.url !== "/portfolio") {
 				<a href="portfolio" class="links-desk">Portfólio</a>
-				<a href="budget" class="links-desk">Orçamento</a>
+				}
+					@if (router.url !== "/budget") {
+						<a href="budget" class="links-desk">Orçamento</a>
+					}
+
 			</div>
 		</div>
 
 		<div class="flex gap-8">
-			<a class="flex items-center">
+			<a class="flex items-center max-[98rem]:hidden">
 				<img
 					src="/imgs/changelanguage.svg"
 					alt="change language"
-					class="h-4 w-auto" />
+					class="h-4 object-cover" />
 			</a>
 
-			<app-orce-button href="/budget"> CRIE SEU ORÇAMENTO </app-orce-button>
+			<app-orce-button href="/budget" class="max-[23rem]:hidden max-[25rem]:text-xs"> <span class="max-[47rem]:hidden mr-1.5 font-bold">CRIE SEU</span>ORÇAMENTO </app-orce-button>
+			
 		</div>
 
-		<button class="text-gray-600 focus:outline-none md:hidden">
-			<svg
-				class="h-6 w-6"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24">
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					[attr.d]="
-						isMobileMenuOpen
-							? 'M6 18L18 6M6 6l12 12'
-							: 'M4 6h16M4 12h16M4 18h16'
-					"></path>
-			</svg>
-		</button>
-	</div>
-	<div
-		class="overflow-hidden bg-white shadow-lg transition-all duration-300 md:hidden"
-		[class]="isMobileMenuOpen ? 'max-h-96 py-2' : 'max-h-0'">
-		<div class="container mx-auto flex flex-col space-y-3 px-4">
-			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Home</a>
-			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Sobre</a>
-			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900"
-				>Serviços</a
-			>
-			<a href="#" class="block py-2 text-gray-600 hover:text-gray-900"
-				>Contato</a
-			>
-			<button
-				class="my-2 w-full rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700">
-				Ação
-			</button>
-		</div>
 	</div>
 </nav>

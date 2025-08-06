@@ -1,4 +1,4 @@
-<div class="flex w-[70%] flex-col justify-center gap-28 md:flex-row">
+<div class="flex md:w-[70%] flex-col justify-center gap-16 md:gap-28 md:flex-row">
 	@for (card of cardsPop(); track card.id) {
 		<app-card-pop [contentCard]="card.content" [iconCard]="card.icon" />
 	}
