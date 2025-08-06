@@ -1,11 +1,12 @@
 .animate-infinite-scroll {
-    animation: scroll 5s linear infinite;
+	animation: scroll 5s linear infinite;
 }
 
-@media (min-width: 768px) { /* Aplica apenas em telas maiores (PC) */
-    .animate-infinite-scroll {
-        animation-duration: 20s; /* Altera apenas a duração */
-    }
+@media (min-width: 768px) {
+	/* Aplica apenas em telas maiores (PC) */
+	.animate-infinite-scroll {
+		animation-duration: 20s; /* Altera apenas a duração */
+	}
 }
 
 @keyframes scroll {

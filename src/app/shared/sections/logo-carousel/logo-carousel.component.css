@@ -1,5 +1,5 @@
 .animate-infinite-scroll {
-	animation: scroll 25s linear infinite;
+	animation: scroll 18s linear infinite;
 }
 @keyframes scroll {
 	from {

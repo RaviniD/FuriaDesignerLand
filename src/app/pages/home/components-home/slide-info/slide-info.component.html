@@ -1,44 +1,52 @@
-<div class="mx-auto w-full max-w-5xl min-w-full ">
-    <!-- Abas de navegação - ajustada para mobile -->
-    <div class="mb-4 flex overflow-x-auto pb-2 sm:mb-6 sm:justify-center sm:gap-6 gap-3 scrollbar-transparent">
-        @for (slide of slides(); track slide.id; let i = $index) {
-            <button
-                (click)="currentIndex.set(i)"
-                class="flex-shrink-0 cursor-pointer px-4 py-2 text-base font-bold sm:w-[20%] sm:px-6 sm:py-3 sm:text-xl"
-                [class]="
-                    currentIndex() === i
-                        ? 'border-red-primary text-red-primary hover:inset-shadow-c border-b-4 sm:border-b-6 transition-all duration-500'
-                        : 'border-white-primary text-white-primary border-b-4 sm:border-b-6 transition-all duration-500 hover:opacity-80 hover:transition-all'
-                ">
-                {{ slide.tabTitle }}
-            </button>
-        }
-    </div>
+<div class="mx-auto w-full max-w-5xl min-w-full">
+	<!-- Abas de navegação - ajustada para mobile -->
+	<div
+		class="scrollbar-transparent mb-4 flex gap-3 overflow-x-auto pb-2 sm:mb-6 sm:justify-center sm:gap-6">
+		@for (slide of slides(); track slide.id; let i = $index) {
+			<button
+				(click)="currentIndex.set(i)"
+				class="flex-shrink-0 cursor-pointer px-4 py-2 text-base font-bold sm:w-[20%] sm:px-6 sm:py-3 sm:text-xl"
+				[class]="
+					currentIndex() === i
+						? 'border-red-primary text-red-primary hover:inset-shadow-c border-b-4 transition-all duration-500 sm:border-b-6'
+						: 'border-white-primary text-white-primary border-b-4 transition-all duration-500 hover:opacity-80 hover:transition-all sm:border-b-6'
+				">
+				{{ slide.tabTitle }}
+			</button>
+		}
+	</div>
 
-    <!-- Conteúdo do slide - reorganizado para mobile -->
-    <div class="flex flex-col gap-8 p-4 transition-opacity duration-300 sm:mx-[10%] sm:gap-12 md:mx-[15%] md:flex-row md:gap-32 md:p-6">
-        <!-- Texto e itens -->
-        <div class="space-y-4 md:w-2/4">
-            <h2 class="text-white-primary text-2xl font-bold sm:text-3xl">
-                {{ currentSlide.title }}
-            </h2>
-            <p class="text-white-primary text-sm sm:text-base">{{ currentSlide.description }}</p>
-            <div class="flex items-start">
-                <ul class="text-red-secundary list-disc space-y-2 pl-5 text-sm sm:text-base">
-                    @for (item of currentSlide.items; track item) {
-                        <li>{{ item }}</li>
-                    }
-                </ul>
-                <img src="imgs/fireslide.svg" alt="fire" class="ml-4 w-8 sm:ml-8 sm:w-10" />
-            </div>
-        </div>
+	<!-- Conteúdo do slide - reorganizado para mobile -->
+	<div
+		class="flex flex-col gap-8 p-4 transition-opacity duration-300 sm:mx-[10%] sm:gap-12 md:mx-[15%] md:flex-row md:gap-32 md:p-6">
+		<!-- Texto e itens -->
+		<div class="space-y-4 md:w-2/4">
+			<h2 class="text-white-primary text-2xl font-bold sm:text-3xl">
+				{{ currentSlide.title }}
+			</h2>
+			<p class="text-white-primary text-sm sm:text-base">
+				{{ currentSlide.description }}
+			</p>
+			<div class="flex items-start">
+				<ul
+					class="text-red-secundary list-disc space-y-2 pl-5 text-sm sm:text-base">
+					@for (item of currentSlide.items; track item) {
+						<li>{{ item }}</li>
+					}
+				</ul>
+				<img
+					src="imgs/fireslide.svg"
+					alt="fire"
+					class="ml-4 w-8 sm:ml-8 sm:w-10" />
+			</div>
+		</div>
 
-        <!-- Imagem - reorganizada para mobile -->
-        <div class="order-first md:order-none md:w-2/4">
-            <img
-                [src]="currentSlide.image"
-                [alt]="currentSlide.title"
-                class="h-auto w-full rounded-lg shadow-lg" />
-        </div>
-    </div>
+		<!-- Imagem - reorganizada para mobile -->
+		<div class="order-first md:order-none md:w-2/4">
+			<img
+				[src]="currentSlide.image"
+				[alt]="currentSlide.title"
+				class="h-auto w-full rounded-lg shadow-lg" />
+		</div>
+	</div>
 </div>

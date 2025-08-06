@@ -1,65 +1,77 @@
 @if (isOpen) {
 	<!-- Overlay -->
 	<div
-	  class="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
-	  [class]="isOpen ? 'opacity-70 pointer-events-auto' : 'opacity-0 pointer-events-none'"
-	  (click)="closeModal()"
-	  aria-hidden="true">
-	</div>
-  
+		class="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
+		[class]="
+			isOpen
+				? 'pointer-events-auto opacity-70'
+				: 'pointer-events-none opacity-0'
+		"
+		(click)="closeModal()"
+		aria-hidden="true"></div>
+
 	<!-- Container do Modal -->
 	<div
-	  class="fixed inset-0 z-50 overflow-y-auto transition-opacity duration-300 ease-in-out"
-	  [class]="isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'">
-	  <div class="flex min-h-screen items-center justify-center p-4 text-center sm:block sm:p-0">
-		<!-- Botão de fechar -->
-		<button
-		  (click)="closeModal()"
-		  class="fixed top-4 right-4 z-50 rounded-full bg-black p-2 text-white opacity-80 hover:opacity-100 sm:top-8 sm:right-8">
-		  <svg
-			class="h-6 w-6"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor">
-			<path
-			  stroke-linecap="round"
-			  stroke-linejoin="round"
-			  stroke-width="2"
-			  d="M6 18L18 6M6 6l12 12" />
-		  </svg>
-		</button>
-  
-		<!-- Conteúdo do Modal -->
+		class="fixed inset-0 z-50 overflow-y-auto transition-opacity duration-300 ease-in-out"
+		[class]="
+			isOpen
+				? 'pointer-events-auto opacity-100'
+				: 'pointer-events-none opacity-0'
+		">
 		<div
-		  class="relative inline-block w-full transform overflow-hidden text-left align-middle transition-all sm:my-8 sm:max-w-[90vw] sm:align-middle lg:max-w-[80vw] xl:max-w-[70vw]">
-		  <!-- Container principal com rolagem -->
-		  <div class="scrollbar-transparent max-h-[93vh] overflow-hidden overflow-y-auto rounded-sm">
-			<!-- Galeria vertical -->
-			<div class="md:space-y-2 space-y-1">
-			  @for (image of cardsPortImages; track image) {
-				<div class="w-full">
-				  <img
-					[src]="image"
-					class="h-auto w-full object-cover"
-					alt="Product image"
-					loading="lazy" />
+			class="flex min-h-screen items-center justify-center p-4 text-center sm:block sm:p-0">
+			<!-- Botão de fechar -->
+			<button
+				(click)="closeModal()"
+				class="fixed top-4 right-4 z-50 rounded-full bg-black p-2 text-white opacity-80 hover:opacity-100 sm:top-8 sm:right-8">
+				<svg
+					class="h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+
+			<!-- Conteúdo do Modal -->
+			<div
+				class="relative inline-block w-full transform overflow-hidden text-left align-middle transition-all sm:my-8 sm:max-w-[90vw] sm:align-middle lg:max-w-[80vw] xl:max-w-[70vw]">
+				<!-- Container principal com rolagem -->
+				<div
+					class="scrollbar-transparent max-h-[93vh] overflow-hidden overflow-y-auto rounded-sm">
+					<!-- Galeria vertical -->
+					<div class="space-y-1 md:space-y-2">
+						@for (image of cardsPortImages; track image) {
+							<div class="w-full">
+								<img
+									[src]="image"
+									class="h-auto w-full object-cover"
+									alt="Product image"
+									loading="lazy" />
+							</div>
+						}
+
+						<div class="bottom-0 bg-black p-6 sm:p-10">
+							<h3
+								class="text-center text-2xl font-medium text-white sm:text-4xl lg:text-5xl">
+								{{ cardsPortTitle }}
+							</h3>
+							<p
+								class="mt-2 text-center text-base font-semibold text-gray-300 sm:mt-4 sm:text-xl">
+								{{ cardsPortTopic }}
+							</p>
+							<p
+								class="mt-4 text-center text-sm font-semibold text-red-500 sm:mt-6 sm:text-lg">
+								{{ cardsPortYear }}
+							</p>
+						</div>
+					</div>
 				</div>
-			  }
-  
-			  <div class="bottom-0 bg-black p-6 sm:p-10">
-				<h3 class="text-center text-2xl font-medium text-white sm:text-4xl lg:text-5xl">
-				  {{ cardsPortTitle }}
-				</h3>
-				<p class="mt-2 text-center text-base font-semibold text-gray-300 sm:mt-4 sm:text-xl">
-				  {{ cardsPortTopic }}
-				</p>
-				<p class="mt-4 text-center text-sm font-semibold text-red-500 sm:mt-6 sm:text-lg">
-				  {{ cardsPortYear }}
-				</p>
-			  </div>
 			</div>
-		  </div>
 		</div>
-	  </div>
 	</div>
-  }
+}

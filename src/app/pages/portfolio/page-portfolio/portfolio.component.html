@@ -1,12 +1,13 @@
 <div
-	class="container mx-auto mt-[4rem] max-sm:mt-[2.5rem] flex w-[70%] flex-col items-center px-4 py-12 md:flex-row">
-	<div class=" md:pr-8">
+	class="container mx-auto mt-[4rem] flex w-[70%] flex-col items-center px-4 py-12 max-sm:mt-[2.5rem] md:flex-row">
+	<div class="md:pr-8">
 		<div class="mb-6 flex">
-			<h1 class="md:text-7xl text-6xl max-sm:text-center">FÚRIA DESIGNER
-			<b
-				class="text-red-primary ml-4 md:text-7xl text-6xl max-sm:text-center transition-opacity duration-300">
-				PORTFÓLIO
-			</b>
+			<h1 class="text-6xl max-sm:text-center md:text-7xl">
+				FÚRIA DESIGNER
+				<b
+					class="text-red-primary ml-4 text-6xl transition-opacity duration-300 max-sm:text-center md:text-7xl">
+					PORTFÓLIO
+				</b>
 			</h1>
 		</div>
 
@@ -17,10 +18,12 @@
 </div>
 
 <section class="relative pt-3">
-	<div class="bg-black-primary absolute inset-0 z-0 md:h-[10rem] h-[23.5rem]"></div>
+	<div
+		class="bg-black-primary absolute inset-0 z-0 h-[23.5rem] md:h-[10rem]"></div>
 
 	<div class="relative z-10 container mx-auto px-4">
-		<div class="my-10 flex max-xl:flex-wrap items-center justify-center md:gap-24 gap-6">
+		<div
+			class="my-10 flex items-center justify-center gap-6 max-xl:flex-wrap md:gap-24">
 			<app-filter-button>Finalizações</app-filter-button>
 			<app-filter-button>Banner Animados</app-filter-button>
 			<app-filter-button>Adaptações</app-filter-button>
@@ -32,10 +35,10 @@
 <section>
 	<div class="mx-auto mt-28 mb-8 px-4">
 		<!-- Container principal com grid responsivo -->
-		
-			<app-card-port class="w-full  justify-items-center space-y-2 grid grid-cols-1  gap-6 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-8" />
-		</div>
 
+		<app-card-port
+			class="grid w-full grid-cols-1 justify-items-center gap-6 space-y-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 2xl:gap-8" />
+	</div>
 
 	<app-footer></app-footer>
 </section>
