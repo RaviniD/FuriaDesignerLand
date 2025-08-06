@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.cdnfonts.com/css/roboto");
-@import url("https://fonts.cdnfonts.com/css/larsseit-font-family");
 
 @theme {
 	--color-red-primary: #ed1c24;
