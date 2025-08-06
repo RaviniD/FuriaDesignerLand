@@ -5,7 +5,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 	styleUrl: "./text-changer.component.css",
 })
 export class TextChangerComponent implements OnInit, OnDestroy {
-	words: string[] = ["DESIGNER", "DESIGN"];
+	words: string[] = ["DESIGNER", "POP", "DESIGN"];
 	currentIndex = 0;
 	private intervalId: number | undefined;
 

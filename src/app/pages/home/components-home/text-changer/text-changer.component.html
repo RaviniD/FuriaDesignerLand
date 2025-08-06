@@ -1,8 +1,12 @@
-<h1 class="block overflow-hidden text-7xl whitespace-nowrap">
+<div class="mb-6 max-sm:mb-14 flex  max-sm:flex-col">
+<h1 class="block overflow-hidden text-7xl max-sm:text-6xl whitespace-nowrap max-sm:text-center ">
 	<span>FÚRIA É</span>
-	<span class="text-red-primary rotating-words ml-4">
+</h1>
+<h1 class="block overflow-hidden text-7xl max-sm:text-6xl whitespace-nowrap">
+	<span class="text-red-primary rotating-words sm:ml-4">
 		@for (word of words; track word; let i = $index) {
 			<b [class.active]="i === currentIndex">{{ word }}</b>
 		}
 	</span>
 </h1>
+</div>

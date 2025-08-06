@@ -1,16 +1,22 @@
 <section class="min-h-screen">
 	<div
-		class="container mx-auto mt-[4rem] flex w-[70%] flex-col items-center px-4 py-12 md:flex-row md:py-24">
-		<div class="mb-10 md:mb-0 md:w-1/2 md:pr-8">
+		class="container mx-auto mt-[4rem] max-sm:mt-[2.5rem] flex lg:w-[70%] flex-col items-center px-4 pt-12 md:flex-row md:py-24">
+		<div class="md:w-1/2 md:pr-8">
 			<div class="mb-6 flex">
-				<app-text-changer></app-text-changer>
+				<app-text-changer class=""></app-text-changer>
+			</div>
+			<div class="flex justify-center md:hidden">
+				<img
+					src="imgs/favicon.png"
+					alt="Logo da Empresa"
+					class=" w-2/3" />
 			</div>
 
-			<h2 class="text-black-primary mb-10 text-lg font-semibold">
+			<h2 class="text-black-primary mb-3 md:mb-10 text-lg max-sm:text-base max-sm:text-center max-sm:mt-4 font-semibold">
 				Especialista em desdobramento de campanhas e criação de banners
 				animados.
 			</h2>
-			<p class="text-black-primary mb-6 text-justify text-base font-semibold">
+			<p class="text-black-primary mb-6 text-justify text-base font-semibold max-sm:text-xs">
 				Na correria do marketing digital, cada segundo conta — e cada peça
 				precisa comunicar com precisão. Somos uma agência especializada em
 				desdobrar campanhas com inteligência visual, adaptando suas peças para
@@ -20,19 +26,23 @@
 				tudo para que sua marca esteja sempre em movimento.
 			</p>
 
-			<p class="text-black-primary mb-16 text-justify text-base font-semibold">
+			<div class="max-md:flex gap-4 my-6 justify-center hidden">
+				<app-orce-button href="/budget"> CRIE SEU ORÇAMENTO </app-orce-button>
+			</div>
+
+			<p class="text-black-primary mb-16 max-sm:mb-8 text-justify text-base font-semibold max-sm:text-xs">
 				<span class="flex">Precisa adaptar uma campanha?</span> Criar variações
 				para mídia programática, redes sociais ou portais? Fale com a gente.
 				Somos especialistas em transformar o conteúdo certo no formato ideal —
 				com animações que chamam atenção e mantêm a consistência da sua marca.
 			</p>
 
-			<div class="flex flex-col gap-4 sm:flex-row">
+			<div class="flex flex-col gap-4 max-md:hidden">
 				<app-orce-button href="/budget"> CRIE SEU ORÇAMENTO </app-orce-button>
 			</div>
 		</div>
 
-		<div class="flex justify-end md:w-1/2">
+		<div class="flex justify-end md:w-1/2 max-md:hidden">
 			<img
 				src="imgs/favicon.png"
 				alt="Logo da Empresa"
@@ -40,27 +50,27 @@
 		</div>
 	</div>
 
-	<section class="relative mt-[1%] pt-3">
-		<div class="bg-black-primary absolute inset-0 z-0 h-[62rem]"></div>
+	<section class="relative mt-[1%] max-sm:mt-0 pt-3">
+		<div class="bg-black-primary absolute inset-0 z-0 h-[101rem] md:h-[62rem]"></div>
 
 		<div class="relative z-10 container mx-auto px-4">
 			<app-logo-carousel class="flex h-32 justify-center" />
 
-			<h2 class="mt-8 mb-10 flex justify-center text-6xl font-bold text-white">
+			<h2 class="mt-8 max-sm:mt-04 flex justify-center text-6xl max-sm:text-4xl max-sm:text-center font-bold text-white">
 				DESBLOQUEIE TODO O PODER DE PRODUÇÃO
 			</h2>
 
-			<app-card-pop-list class="my-[7rem] flex justify-center" />
+			<app-card-pop-list class="my-[7rem] max-sm:my-[3rem] flex justify-center" />
 
 			<h2
 				id="objetivo"
-				class="mb-10 flex justify-center text-6xl font-bold text-white">
+				class="mb-10 max-sm:mt-14 flex justify-center text-6xl max-sm:text-4xl max-sm:text-center font-bold text-white">
 				GANHE PRODUTIVIDADE EM SUA AGÊNCIA
 			</h2>
 
-			<section class="container w-full px-4 py-12">
+			<section class="container w-full px-4 py-12 max-sm:py-0">
 				<div class="mx-auto max-w-[87%]">
-					<div class="flex w-full flex-col gap-[16rem] md:flex-row">
+					<div class="flex w-full flex-col max-sm:gap-4 gap-[16rem] md:flex-row">
 						<div class="md:w-1/2">
 							<img
 								src="imgs/jobdemo.png"
@@ -69,12 +79,12 @@
 						</div>
 
 						<div class="space-y-4 md:w-1/2">
-							<h2 class="text-white-primary text-2xl font-bold md:text-3xl">
+							<h2 class="text-white-primary text-2xl font-bold md:text-3xl max-sm:text-center">
 								Reduza Custos <br />
 								Sem perder Qualidade.
 							</h2>
 
-							<p class="text-white-primary leading-relaxed">
+							<p class="text-white-primary leading-relaxed max-sm:text-justify">
 								Terceirize seus desdobramentos com agilidade e economia. Deixe
 								sua equipe focada na criação e deixe o trabalho repetitivo com a
 								gente. Somos especialistas em desdobrar peças para todos os
@@ -105,14 +115,14 @@
 
 			<section class="container w-full px-4 py-12">
 				<div class="mx-auto max-w-[87%]">
-					<div class="flex w-full flex-col gap-[16rem] md:flex-row">
+					<div class="flex w-full flex-col max-sm:gap-4 gap-[16rem] md:flex-row">
 						<div class="space-y-4 md:w-1/2">
-							<h2 class="text-black-primary text-2xl font-bold md:text-3xl">
+							<h2 class="text-black-primary text-2xl font-bold md:text-3xl max-sm:text-center">
 								Destaque sua <br />
 								Marca com Design versátil
 							</h2>
 
-							<p class="text-black-primary leading-relaxed">
+							<p class="text-black-primary leading-relaxed max-sm:text-justify">
 								Na comunicação visual, a variação de dimensões dos seus produtos
 								é essencial para fortalecer a identidade da sua marca.
 								Logotipos, banners e artes adaptáveis garantem visibilidade em
@@ -153,22 +163,22 @@
 </section>
 
 <section class="relative mt-[1%] pt-3">
-	<div class="bg-black-primary absolute inset-0 z-0 h-[51rem]"></div>
+	<div class="bg-black-primary absolute inset-0 z-0 max-sm:h-[72rem] h-[51rem]"></div>
 
 	<div class="relative z-10 container mx-auto px-4">
 		<h2
 			id="sobre"
-			class="mt-12 mb-16 flex justify-center text-6xl font-bold text-white">
+			class="mt-12 mb-16 flex justify-center text-6xl max-sm:text-4xl max-sm:text-center font-bold text-white">
 			SOBRE O QUE FAZEMOS E QUE VOCÊ PRECISA
 		</h2>
 
 		<app-slide-info class="min-w-full"></app-slide-info>
 	</div>
 
-	<section class="mt-[8rem]">
+	<section class="mt-[8rem] max-sm:mt-[6rem]">
 		<h2
 			id="vitrine"
-			class="text-black-primary flex justify-center text-6xl font-bold">
+			class="text-black-primary flex justify-center text-6xl max-sm:text-4xl max-sm:text-center font-bold">
 			VEJA O NOSSO PORTFÓLIO
 		</h2>
 
@@ -180,7 +190,7 @@
 
 		<h2
 			id="feedbacks"
-			class="text-black-primary my-[6rem] flex justify-center text-6xl font-bold">
+			class="text-black-primary md:my-[6rem] mt-[3rem] flex justify-center text-6xl max-sm:text-4xl max-sm:text-center font-bold">
 			O QUE AS LENDAS DIZEM SOBRE NÓS
 		</h2>
 

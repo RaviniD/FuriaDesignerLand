@@ -6,3 +6,20 @@
 ::view-transition-new(slide-tabs) {
 	animation-duration: 0.3s;
 }
+
+.scrollbar-transparent::-webkit-scrollbar {
+    height: 14px;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb {
+    background: rgba(239, 61, 74, 0.5);
+    border-radius: 1px;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb:hover {
+    background: rgba(239, 61, 74, 0.7);
+}

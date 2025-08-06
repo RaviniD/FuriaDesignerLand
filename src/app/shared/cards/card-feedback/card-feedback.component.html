@@ -1,16 +1,16 @@
 <div
-	class="hover:shadow-red-secundary-opc flex h-[29.8rem] w-[17.8rem] flex-col items-center justify-between rounded-sm px-8 shadow-2xl transition-all duration-500 hover:scale-[102%] hover:shadow-md">
+	class="hover:shadow-red-secundary-opc flex md:h-[29.8rem] h-[27.8rem] md:w-[17.8rem] w-[15.8rem] flex-col items-center justify-between rounded-sm px-8 shadow-2xl transition-all duration-500 hover:scale-[102%] hover:shadow-md">
 	<img
 		[src]="iconLogoCard"
 		alt="icon-card-pop "
-		class="size-[5rem] object-contain my-4" />
-	<h3 class="text-black-primary my-4 text-center text-2xl font-bold">
+		class="my-4 md:size-[5rem] size-[4rem] object-contain" />
+	<h3 class="text-black-primary my-4 text-center md:text-2xl text-xl font-bold">
 		{{ feedbackTextCard }}
 	</h3>
 
 	<div class="flex w-full items-center justify-start gap-4 py-6">
 		<img [src]="iconPersonCard" alt="icon-card-pop " class="size-[3rem]" />
-		<h3 class="text-gray-primary text-sm font-bold">
+		<h3 class="text-gray-primary md:text-sm text-xs font-bold">
 			{{ ProfessionPersonCard }}
 		</h3>
 	</div>
