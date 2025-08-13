@@ -13,17 +13,12 @@ import { trigger, transition, style, animate } from "@angular/animations";
 	templateUrl: "./product-view-modal.component.html",
 	styleUrl: "./product-view-modal.component.css",
 	animations: [
-		// Defina as animações aqui
 		trigger("fadeInOut", [
 			transition(":enter", [
-				// Animação de entrada
 				style({ opacity: 0 }),
 				animate("300ms ease-out", style({ opacity: 1 })),
 			]),
-			transition(":leave", [
-				// Animação de saída
-				animate("300ms ease-in", style({ opacity: 0 })),
-			]),
+			transition(":leave", [animate("300ms ease-in", style({ opacity: 0 }))]),
 		]),
 	],
 })
@@ -46,7 +41,7 @@ export class ProductViewModalComponent implements OnChanges {
 
 	closeModal() {
 		this.closed.emit();
-		// Quando fechar o modal
+
 		document.body.classList.remove("modal-open");
 	}
 
