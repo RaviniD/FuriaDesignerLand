@@ -24,8 +24,8 @@ export class CardPortComponent {
 		{
 			id: 1,
 			images: [
-				"imgs/products-port/portProduct2_0.png",
 				"imgs/products-port/portProduct2_1.png",
+				"imgs/products-port/portProduct2_0.png",
 				"imgs/products-port/portProduct2_2.png",
 			],
 			title: "MOVADO | CAMPANHA: TOMMY HILFIGER PA SITE VIVARA",
@@ -35,8 +35,8 @@ export class CardPortComponent {
 		{
 			id: 2,
 			images: [
-				"imgs/products-port/portProduct4_0.png",
 				"imgs/products-port/portProduct4_1.png",
+				"imgs/products-port/portProduct4_0.png",
 				"imgs/products-port/portProduct4_2.png",
 			],
 			title: "MOVADO | CAMPANHA: TOMMY HILFIGER DIA DAS MÃES",
@@ -47,8 +47,8 @@ export class CardPortComponent {
 		{
 			id: 3,
 			images: [
-				"imgs/products-port/portProduct3_0.png",
 				"imgs/products-port/portProduct3_1.png",
+				"imgs/products-port/portProduct3_0.png",
 				"imgs/products-port/portProduct3_2.png",
 			],
 			title: "CAMPANHAS: AIR WICK",
@@ -58,8 +58,8 @@ export class CardPortComponent {
 		{
 			id: 4,
 			images: [
-				"imgs/products-port/portProduct5_0.png",
 				"imgs/products-port/portProduct5_1.png",
+				"imgs/products-port/portProduct5_0.png",
 			],
 			title: "EMBALAGENS: OAKBERRY",
 			topic: "ADAPTAÇÃO, DIAGRAMAÇÃO E FINALIZAÇÃO",

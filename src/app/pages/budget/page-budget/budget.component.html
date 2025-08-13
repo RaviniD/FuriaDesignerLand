@@ -28,7 +28,7 @@
 		PREENCHA PARA SOLICITAR O NOSSO SERVIÇO E JÁ TE ATENDEMOS!
 	</h2>
 
-	<div class="grid grid-cols-2 gap-x-8 gap-y-4">
+	<div class="grid gap-x-8 gap-y-4 md:grid-cols-2">
 		<div class="space-y-1">
 			<label
 				for="name"
@@ -40,7 +40,7 @@
 				name="name"
 				id="name"
 				required
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+				class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
@@ -54,7 +54,7 @@
 				name="email"
 				id="email"
 				required
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 invalid:text-red-700 focus:shadow-sm focus:outline-none" />
+				class="border-b-red-secundary required: focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 invalid:text-red-700 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
@@ -69,7 +69,7 @@
 				id="telefone"
 				required
 				pattern="\(?\d{2}\)?[\s-]?\d{4,5}[\s-]?\d{4}"
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+				class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none" />
 			<p class="text-gray-primary text-xs">
 				Formato: (99) 99999-9999 ou 99 9999-9999
 			</p>
@@ -86,7 +86,7 @@
 				name="cargo"
 				id="cargo"
 				required
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+				class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none" />
 		</div>
 
 		<div class="space-y-1">
@@ -99,7 +99,7 @@
 				name="service"
 				id="service"
 				required
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none">
+				class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none">
 				<option value="" disabled selected class="text-black-primary">
 					Selecione um Serviço
 				</option>
@@ -136,7 +136,7 @@
 				name="linkEmpresa"
 				id="linkEmpresa"
 				placeholder="https://"
-				class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none" />
+				class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none" />
 		</div>
 	</div>
 
@@ -151,7 +151,7 @@
 			name="desc"
 			id="desc"
 			rows="2"
-			class="border-b-red-secundary focus:border-b-red-secundary focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 focus:shadow-sm focus:outline-none"></textarea>
+			class="border-b-red-secundary required:bg-red/50 focus:shadow-red-secundary w-full rounded-sm border-b-4 px-3 py-2 text-gray-300 required:border-red-700 focus:shadow-sm focus:outline-none"></textarea>
 	</div>
 
 	<input type="hidden" name="_captcha" value="false" />
@@ -159,13 +159,19 @@
 	<input type="hidden" name="_subject" value="Novo Contato - Formulário Site" />
 	<input type="hidden" name="_next" value="https://furiadesigner.com.br" />
 
-	<div class="mt-2 flex items-center justify-center align-middle">
+	<div class="mt-2 flex flex-col items-center justify-center align-middle">
+		@if (!isValid) {
+			<span
+				class="mb-4 text-center text-gray-300 italic underline underline-offset-4"
+				>ESTÁ FALTANDO PARTE DO FORMULÁRIO PARA SOLICITAR!
+			</span>
+		}
 		<button
 			type="submit"
 			[disabled]="isLoading"
 			class="bg-red-primary hover:bg-red-secundary flex h-12 w-max cursor-pointer items-center justify-center rounded-sm px-4 py-2 text-white transition">
 			@if (isLoading) {
-				<span class="font-bold">Enviando...</span>
+				<span class="font-bold">ENVIANDO...</span>
 			} @else {
 				<span class="font-bold">SOLICITE ORÇAMENTO</span>
 			}

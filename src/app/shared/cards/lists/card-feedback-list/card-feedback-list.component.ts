@@ -22,11 +22,11 @@ export class CardFeedbackListComponent {
 
 		{
 			id: 2,
-			iconLogo: "imgs/logos/UNILEVER LOGO.svg",
+			iconLogo: "imgs/logos/NORMATIF LOGO.png",
 			feedbackText:
-				'"Terceirizar os desdobramentos com eles foi a melhor decisão. Reduzimos custos e ganhamos tempo."',
+				'"Design impecável, comprometimento com a data de entrega, além da atenção aos detalhes, garantindo a conformidade dos dizeres."',
 			iconPerson: "imgs/FEEDBACK PERSON2.png",
-			professionPerson: "Bruna Miranda, Unilever",
+			professionPerson: "Kelly Silva, Normatif",
 		},
 
 		{

@@ -21,6 +21,7 @@ export class BudgetComponent {
 	showSuccessModal = false;
 	formSubmitted = false;
 	isLoading = false;
+	isValid = true;
 
 	onSubmit(event: Event) {
 		event.preventDefault();
@@ -32,6 +33,10 @@ export class BudgetComponent {
 			this.formSubmitted = true;
 
 			this.submitFormData(form);
+		}
+
+		if (!form.checkValidity() && !this.formSubmitted) {
+			this.isValid = false;
 		}
 	}
 

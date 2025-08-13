@@ -15,9 +15,9 @@
 					class="h-12 object-cover" />
 			</a>
 
-			<div class="ml-3 flex md:space-x-8 space-x-4">
-				<div class="flex md:space-x-8 space-x-4 max-[60rem]:hidden">
-					<div class="flex md:space-x-8 space-x-4 max-[85rem]:hidden">
+			<div class="ml-3 flex space-x-4 md:space-x-8">
+				<div class="flex space-x-4 max-[60rem]:hidden md:space-x-8">
+					<div class="flex space-x-4 max-[85rem]:hidden md:space-x-8">
 						@if (router.url === "/") {
 							<button (click)="scrollTo('objetivo')" class="links-desk">
 								Objetivo
@@ -29,14 +29,14 @@
 							Sobre
 						</button>
 					}
-					<div class="flex md:space-x-8 space-x-4 max-[90rem]:hidden">
+					<div class="flex space-x-4 max-[90rem]:hidden md:space-x-8">
 						@if (router.url === "/") {
 							<button (click)="scrollTo('vitrine')" class="links-desk">
 								Vitrine
 							</button>
 						}
 					</div>
-					<div class="flex md:space-x-8 space-x-4 max-[73rem]:hidden">
+					<div class="flex space-x-4 max-[73rem]:hidden md:space-x-8">
 						@if (router.url === "/") {
 							<button (click)="scrollTo('feedbacks')" class="links-desk">
 								Feedbacks
